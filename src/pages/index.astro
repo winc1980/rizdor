@@ -1,12 +1,30 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-const title = "";
-const description = "";
-const og_image = "";
+import { Image } from 'astro:assets';
+import logo from './images/logo.png';
+const title = "早稲田大学アンサンブル・リドール";
+const description = "早稲田大学公認音楽サークル「アンサンブル リドール」オフィシャルウェブサイト。ポップスからジャズ、ラテンやオーケストラまで幅広いジャンルで活動。";
+const og_image = { logo }; // 表示されない
+import biglogo from './images/biglogo.png';
+import JS1 from './images/JS-1.png';
+import JS2 from './images/JS-2.png';
+import JS3 from './images/JS-3.png';
+
 ---
 
 <Layout title={title} , description={description} og_image={og_image}>
 	<main>
+		<section id="top" class="top">
+			<div class="top-logos">
+			<h1>早稲田公認音楽サークル</h1>
+			<Image src={ biglogo } alt="大きなロゴ" class="big-logo"/>
+			<h2>アンサンブル・リドール</h1>
+			</div>
+			<div class="top-JS"> <!-- ナビゲーション,インジケーターもつける -->
+
+			</div>
+
+		</section>
 
 	</main>
 </Layout>

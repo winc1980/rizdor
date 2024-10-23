@@ -1,7 +1,30 @@
 ---
-
+import "@/scss/styles.scss";
+import { Image } from 'astro:assets';
+import logo from './images/logo.png';
+import x from './images/x.png';
+import instagram from './images/instagram.png';
 ---
 
 <header>
-
+    <Image src={ logo } alt="ロゴ" class="logo"/>
+    <nav class="navigation">
+    <ul class="navbar">
+        <li class="nav-link"><a href="">Blog</a></li>
+        <li class="nav-link"><a href="">Schedule</a></li>
+        <li class="nav-link"><a href="">Concert</a></li>
+    </ul>
+    <ul class="sns">
+        <li>
+            <a href="https://twitter.com/ens_rizdor">
+                <Image src={ x } alt="x.comのアイコン">
+                    </a>
+                </li>
+        <li>
+            <a href="https://www.instagram.com/ens_rizdor">
+                <Image src={ instagram } alt="instagram.comのアイコン">
+                    </a>
+                </li>
+    </ul>
+    </nav>
 </header>

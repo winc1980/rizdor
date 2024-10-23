@@ -1,3 +1,79 @@
 @charset "UTF-8";
 
 @use "./variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//  --------------------------------- headerここから ---------------------------------
+// なぜ左側は溢れないのに右側だけmarginがなくなってあふれる？
+header {
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  height: 100px;
+
+  .navigation {
+    display: flex;
+    width: 72vw;
+
+    .navbar {
+      margin-left: auto;
+      margin-right: 65px;
+
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #73450d;
+      }
+
+      li {
+        padding: 0.5rem 1rem;
+      }
+    }
+    .sns {
+      width: 160px;
+      justify-content: space-between;
+    }
+
+    ul {
+      display: flex;
+      margin: auto 0;
+    }
+  }
+}
+//  --------------------------------- headerここまで ---------------------------------
+//  --------------------------------- mainここから ---------------------------------
+//  --------------------------------- topここから ---------------------------------
+main{
+  .top{
+    // 画像に対して文字の位置を固定したい。画面の大きさを変えると文字が動いてしまうから。
+    .top-logos{
+      position:relative;
+      display: flex;
+      justify-content: center;
+      h1{
+        position: absolute;
+        top: 118px;
+        left: 119px;
+        font-size: 36px;
+        font-weight: 400;
+        color: #73450d;
+      }
+      h2{
+        position: absolute;
+        top: 465px;
+        left: 938px;
+        font-size: 36px;
+        font-weight: 400;
+        color: #73450d;
+
+      }
+    }
+  }
+}
+//  --------------------------------- topここまで ---------------------------------
+//  --------------------------------- mainここまで ---------------------------------
+
