@@ -72,40 +72,76 @@ main {
       }
     }
     .top-News {
-      p {
+      display: flex; 
+      justify-content: center;
+      padding-top: 131px;
+
+      .top-News_l-container{
+        max-width: 86%;
+        width: 100%;
+      .top-News_letter {
+        color: #73450D;
+        font-size: 32px;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
         // 各方向のクラスにスタイルを当てる
-        &.top-News_n {
+        &.top-News_letter_n {
           // 'N' のスタイル
         }
-        &.top-News_e {
+        &.top-News_letter_e {
           // 'e' のスタイル
         }
-        &.top-News_w {
+        &.top-News_letter_w {
           // 'w' のスタイル
         }
-        &.top-News_s {
+        &.top-News_letter_s {
           // 's' のスタイル
         }
       }
     
       .top-News_box {
         display: flex; // 左右にコンテンツを並べるためのflexbox
+        justify-content: space-between;
     
-        .top-News_box-left {
-          margin-bottom: 100px;
-          margin-left: 100px;
-    
-          // Newsコンポーネントに対するスタイル
-          News {
-            padding-top: 35px;
-          }
-        }
-    
-        .top-News_box-right {
-          margin-left: 85px;
-        }
       }
     }
+  }
+
+  .top-Schedule {
+    display: flex; 
+    justify-content: center;
+    padding-top: 203px;
+
+    .top-Schedule_l-container{
+      max-width: 86%;
+      width: 100%;
+
+    .top-Schedule_letter {
+      color: #73450D;
+      font-size: 32px;
+      font-weight: 400;
+      display: flex;
+      justify-content: center;
+      // 各方向のクラスにスタイルを当てる
+      &.top-Schedule_letter_n {
+        // 'N' のスタイル
+      }
+      &.top-Schedule_letter_e {
+        // 'e' のスタイル
+      }
+      &.top-Schedule_letter_w {
+        // 'w' のスタイル
+      }
+      &.top-Schedule_letter_s {
+        // 's' のスタイル
+      }
+    }
+    .kari{
+      padding-bottom: 1000px;
+    }
+  }
+}
   }
 }    
 //  --------------------------------- topここまで ---------------------------------
