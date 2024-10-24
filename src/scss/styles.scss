@@ -7,7 +7,6 @@
   padding: 0;
 }
 
-
 //  --------------------------------- headerここから ---------------------------------
 // なぜ左側は溢れないのに右側だけmarginがなくなってあふれる？
 header {
@@ -48,14 +47,14 @@ header {
 //  --------------------------------- headerここまで ---------------------------------
 //  --------------------------------- mainここから ---------------------------------
 //  --------------------------------- topここから ---------------------------------
-main{
-  .top{
+main {
+  .top {
     // 画像に対して文字の位置を固定したい。画面の大きさを変えると文字が動いてしまうから。
-    .top-logos{
-      position:relative;
+    .top-logos {
+      position: relative;
       display: flex;
       justify-content: center;
-      h1{
+      h1 {
         position: absolute;
         top: 118px;
         left: 119px;
@@ -63,19 +62,51 @@ main{
         font-weight: 400;
         color: #73450d;
       }
-      h2{
+      h2 {
         position: absolute;
         top: 465px;
         left: 938px;
         font-size: 36px;
         font-weight: 400;
         color: #73450d;
-
+      }
+    }
+    .top-News {
+      p {
+        // 各方向のクラスにスタイルを当てる
+        &.top-News_n {
+          // 'N' のスタイル
+        }
+        &.top-News_e {
+          // 'e' のスタイル
+        }
+        &.top-News_w {
+          // 'w' のスタイル
+        }
+        &.top-News_s {
+          // 's' のスタイル
+        }
+      }
+    
+      .top-News_box {
+        display: flex; // 左右にコンテンツを並べるためのflexbox
+    
+        .top-News_box-left {
+          margin-bottom: 100px;
+          margin-left: 100px;
+    
+          // Newsコンポーネントに対するスタイル
+          News {
+            padding-top: 35px;
+          }
+        }
+    
+        .top-News_box-right {
+          margin-left: 85px;
+        }
       }
     }
   }
-
-}
+}    
 //  --------------------------------- topここまで ---------------------------------
 //  --------------------------------- mainここまで ---------------------------------
-
