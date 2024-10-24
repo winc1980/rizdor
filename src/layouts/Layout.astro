@@ -6,6 +6,7 @@ import Footer from "@/components/Footer.astro";
 // タイトル等をPropsとして受け取る。
 let { title = "", description = "", og_image = "" } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="ja">
   <head>
@@ -25,12 +26,24 @@ let { title = "", description = "", og_image = "" } = Astro.props;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content={og_image} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" sizes="32x32" type="image/png" href="" />
     <link rel="shortcut icon" href="" />
   </head>
-  <body>
+  <body class="kaisei-opti-regular"> <!-- フォントクラスを追加 -->
     <Header />
     <slot />
     <Footer />
   </body>
 </html>
+
+<style>
+  /* これでフォントが適用されるはず */
+  .kaisei-opti-regular {
+    font-family: "Kaisei Opti", serif; /* フォントファミリーを指定 */
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
