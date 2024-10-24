@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import JS1 from './images/JS-1.png';
+import JS2 from './images/JS-2.png';
+import JS3 from './images/JS-3.png';
+import JS4 from './images/red.jpg';
+import JS5 from './images/blue.jpg';
+import JS6 from './images/yellow.jpg';
+
+---
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><Image src={JS1} alt="" /></div>
+    <div class="swiper-slide"><Image src={JS2} alt="" /></div>
+    <div class="swiper-slide"><Image src={JS3} alt="" /></div>
+    <div class="swiper-slide"><Image src={JS4} alt="" /></div>
+    <div class="swiper-slide"><Image src={JS5} alt="" /></div>
+    <div class="swiper-slide"><Image src={JS6} alt="" /></div>
+  </div>
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button swiper-button-prev"></div>
+  <div class="swiper-button swiper-button-next"></div>
+
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<style>
+  .swiper-wrapper {
+    max-width: 800px;
+    max-height: 500px;
+  }
+
+  .swiper-slide img {
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .swiper-button::after {
+    font-size: 32px;
+    color: rgb(215, 119, 22);
+  }
+</style>
+
+<script>
+  import Swiper from 'swiper'
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+  import 'swiper/css/bundle'
+
+  export const swiperConfig = {
+    modules: [Navigation, Pagination, Autoplay],
+    loop: true, 
+    slidesPerView: 2, 
+    spaceBetween: 20,
+    centeredSlides: true,
+
+    autoplay: {
+      delay: 0, 
+      disableOnInteraction: false, 
+    },
+    speed: 5000, // 5000msで移動する
+    allowTouchMove: false,
+    
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  }
+
+  const swiper = new Swiper('.swiper', swiperConfig)
+</script>
