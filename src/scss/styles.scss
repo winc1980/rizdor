@@ -8,7 +8,6 @@
 }
 
 //  --------------------------------- headerここから ---------------------------------
-// なぜ左側は溢れないのに右側だけmarginがなくなってあふれる？
 header {
   max-width: 85%;
   margin: 0 auto;
@@ -45,9 +44,10 @@ header {
   }
 }
 //  --------------------------------- headerここまで ---------------------------------
-//  --------------------------------- mainここから ---------------------------------
+
 //  --------------------------------- topここから ---------------------------------
 main {
+  background-color: #f2f2f2;
   .top {
     // 画像に対して文字の位置を固定したい。画面の大きさを変えると文字が動いてしまうから。
     .top-logos {
@@ -71,78 +71,81 @@ main {
         color: #73450d;
       }
     }
-    .top-News {
-      display: flex; 
-      justify-content: center;
-      padding-top: 131px;
-
-      .top-News_l-container{
-        max-width: 86%;
-        width: 100%;
-      .top-News_letter {
-        color: #73450D;
-        font-size: 32px;
-        font-weight: 400;
-        display: flex;
-        justify-content: center;
-        // 各方向のクラスにスタイルを当てる
-        &.top-News_letter_n {
-          // 'N' のスタイル
-        }
-        &.top-News_letter_e {
-          // 'e' のスタイル
-        }
-        &.top-News_letter_w {
-          // 'w' のスタイル
-        }
-        &.top-News_letter_s {
-          // 's' のスタイル
-        }
-      }
-    
-      .top-News_box {
-        display: flex; // 左右にコンテンツを並べるためのflexbox
-        justify-content: space-between;
-    
-      }
-    }
-  }
-
-  .top-Schedule {
-    display: flex; 
-    justify-content: center;
-    padding-top: 203px;
-
-    .top-Schedule_l-container{
-      max-width: 86%;
-      width: 100%;
-
-    .top-Schedule_letter {
-      color: #73450D;
-      font-size: 32px;
-      font-weight: 400;
-      display: flex;
-      justify-content: center;
-      // 各方向のクラスにスタイルを当てる
-      &.top-Schedule_letter_n {
-        // 'N' のスタイル
-      }
-      &.top-Schedule_letter_e {
-        // 'e' のスタイル
-      }
-      &.top-Schedule_letter_w {
-        // 'w' のスタイル
-      }
-      &.top-Schedule_letter_s {
-        // 's' のスタイル
-      }
-    }
-    .kari{
-      padding-bottom: 1000px;
-    }
   }
 }
-  }
-}    
 //  --------------------------------- topここまで ---------------------------------
-//  --------------------------------- mainここまで ---------------------------------
+
+//  --------------------------------- middleここから ---------------------------------
+.middle{
+  .middle-l-container{
+    max-width: 86%;
+    width: 100%;
+    margin: 0 auto;
+    
+    .middle-News {
+      padding-top: 131px;
+    }
+
+        .middle-News_letter {
+          color: #73450d;
+          font-size: 32px;
+          font-weight: 400;
+          display: flex;
+          justify-content: center;
+
+          &.middle-News_letter_n {
+          }
+          &.middle-News_letter_e {
+          }
+          &.middle-News_letter_w {
+          }
+          &.middle-News_letter_s {
+          }
+        }
+
+        .middle-News_box {
+          display: flex;
+          justify-content: space-between;
+        }
+        .middle-Schedule {
+          padding-top: 203px;
+
+        .middle-Schedule_letter{
+          color: #73450d;
+          font-size: 32px;
+          font-weight: 400;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .middle-About {
+        .middle-Schedule_letter {
+          color: #73450d;
+          font-size: 32px;
+          font-weight: 400;
+          display: flex;
+          justify-content: center;
+          .middle-About_letter_a {
+          }
+          .middle-About_letter_b {
+          }
+          .middle-About_letter_o {
+          }
+          .middle-About_letter_u {
+          }
+          .middle-About_letter_t {
+          }
+        }
+        .middle-About_points {
+          .middle-About_header {
+          }
+          .middle-About_explanation {
+          }
+        }
+      }
+      
+    } // l-containerの括弧
+  } // middleの括弧
+    
+//  --------------------------------- middleここまで ---------------------------------

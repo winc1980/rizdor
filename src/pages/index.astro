@@ -7,7 +7,8 @@ const description = "早稲田大学公認音楽サークル「アンサンブ�
 const og_image = { logo }; // 表示されない
 import biglogo from './images/biglogo.png';
 import Carousel from '@/components/Carousel.astro'
-import News from '@/components/news.astro';
+import NewsData from "@/components/NewsData.astro"
+import EventData from "@/components/EventData.astro";
 
 ---
 
@@ -22,45 +23,82 @@ import News from '@/components/news.astro';
 			<div class="top-JS"> <!-- ナビゲーション,インジケーターもつける -->	
 				<Carousel />		  
 			</div>
-			<div class="top-News">
-				<div class="top-News_l-container">
-				<div class="top-News_letter">
-				<p class="top-News_letter_n">N</p>
-				<p class="top-News_letter_e">e</p>
-				<p class="top-News_letter_w">w</p>
-				<p class="top-News_letter_s">s</p>
+		</section>
+		<section id="middle" class="middle">
+			<div class="middle-l-container">
+			<div class="middle-News">
+			<div class="middle-News_letter">
+				<p class="middle-News_letter_n">N</p>
+				<p class="middle-News_letter_e">e</p>
+				<p class="middle-News_letter_w">w</p>
+				<p class="middle-News_letter_s">s</p>
 				</div>
-				<div class="top-News_box">
-				<div class="top-News_box-left">
-				<News />
-				<News />
-				<News />
+				<div class="middle-News_box">
+				<div class="middle-News_box-left">
+				<NewsData />
+				<NewsData />
+				<NewsData />
 				</div>
-				<div class="top-News_box-right">
-				<News />
-				<News />
-				<News />
+				<div class="middle-News_box-right">
+				<NewsData />
+				<NewsData />
+				<NewsData />
 				</div>
 				</div>
 			</div>
-			</div>
-			<div class="top-Schedule">
-				<div class="top-Schedule_l-container">
-					<div class="top-Schedule_letter">
-						<p class="top-Schedule_letter_s">S</p>
-						<p class="top-Schedule_letter_c">c</p>
-						<p class="top-Schedule_letter_h">h</p>
-						<p class="top-Schedule_letter_e1">e</p>
-						<p class="top-Schedule_letter_d">d</p>
-						<p class="top-Schedule_letter_u">u</p>
-						<p class="top-Schedule_letter_l">l</p>
-						<p class="top-Schedule_letter_e2">e</p>
+			<div class="middle-Schedule">
+					<div class="middle-Schedule_letter">
+						<p class="middle-Schedule_letter_s">S</p>
+						<p class="middle-Schedule_letter_c">c</p>
+						<p class="middle-Schedule_letter_h">h</p>
+						<p class="middle-Schedule_letter_e1">e</p>
+						<p class="middle-Schedule_letter_d">d</p>
+						<p class="middle-Schedule_letter_u">u</p>
+						<p class="middle-Schedule_letter_l">l</p>
+						<p class="middle-Schedule_letter_e2">e</p>
 						</div>
-						<div class="kari"></div>
-
-				</div>
+						<div class="kari">
+							<EventData />
+							<EventData />
+							<EventData />
+						</div>
 			</div>
+			<div class="middle-About">
+				<div class="middle-Schedule_letter">
+					<p class="middle-About_letter_a">A</p>
+					<p class="middle-About_letter_b">b</p>
+					<p class="middle-About_letter_o">o</p>
+					<p class="middle-About_letter_u">u</p>
+					<p class="middle-About_letter_t">t</p>
+				</div>
+				<div class="middle-About_points">
+					<div class="middle-About_header">
+						<p>01</p>
+						<p>非レギュラー制</p>
+					</div>
+					<p class="middle-About_explanation">つまりメンバー全員が演奏会に参加するという形をとっています。そのため、楽器を始めたての初心者でも、
+						経験者と同様にコンサートの舞台で演奏することができます。</p>
+				</div>
+				<div class="middle-About_points">
+					<div class="middle-About_header">
+						<p>02</p>
+						<p>初心者大歓迎</p>
+					</div>
+					<p class="middle-About_explanation">リドールでは、初心者も多数受け付けており、現在メンバーの約3割が初心者です。中には大学までほとんど音楽をしたことのなかったメンバーや、
+						大学に入ってから別の楽器を始めてみたというメンバーもいます。リドールではこうした初心者も上級生がサポートしていきます。</p>
+				</div>
+				<div class="middle-About_points">
+					<div class="middle-About_header">
+						<p>03</p>
+						<p>インカレ生多数</p>
+					</div>
+					<p class="middle-About_explanation">インカレサークルのため、他大学の学生さんも大歓迎です。現在、日本女子大、立教大、東京女子大、昭和女子大、ICU、上智大、東京女子医大、
+						東京医科歯科大、武蔵野大、津田塾大、清泉女子大の学生さんも参加しています。</p>
+				</div>
+				
 
+			</div>
+		</div>			
 		</section>
 
 	</main>
