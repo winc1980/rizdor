@@ -273,7 +273,6 @@ main {
       .middle-About_detail{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1000px;
         padding-top: 183px;
 
         p{
@@ -295,7 +294,48 @@ main {
           padding-top: 22px;
         }
       }
-    }      
+    }     
+    
+    .middle-Blog {
+      padding-top: 120px;
+
+        .middle-Blog_letter {
+          color: #73450d;
+          font-size: 32px;
+          font-weight: 400;
+          display: flex;
+          justify-content: center;
+
+          &.middle-Blog_letter_b {
+          }
+          &.middle-Blog_letter_l {
+          }
+          &.middle-Blog_letter_o {
+          }
+          &.middle-Blog_letter_g {
+          }
+        }
+        .middle-Blog_about{
+          display: flex;
+          justify-content: space-between;
+        .middle-Blog_pa{
+          margin-top: 225px;
+          width: 42vw;
+          display: flex;
+          flex-direction: column; 
+          align-items: center; 
+          text-align: center; 
+        .middle-Blog_p{
+          padding-bottom: 146px;
+        }
+        
+        .middle-Blog_link{
+          font-size: 32px;
+        }
+      }
+
+      }
+    }
 
 
 
@@ -303,3 +343,14 @@ main {
   } // middleの括弧
     
 //  --------------------------------- middleここまで ---------------------------------
+// --------------------------------footerここから----------------------------------------
+footer {
+  background-color: #73450D;
+  display: flex;              
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;    
+  height: 100px;
+  text-align: center;         
+}
+
