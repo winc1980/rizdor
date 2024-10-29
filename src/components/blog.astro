@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import image from './images/image.png';
+
+
+---
+<!-- blog title等々、CMSから読み込むときに書き換えてください。 -->
+ <div class="blog">
+<Image src={image} alt="CMSから読み込んだ画像" /> 
+<p class="title">簡単なタイトル「・・・・」</p>
+<p class="date">yyyy.mm.dd</p>
+</div>
+<style>
+    .blog{
+        width: 500px;
+        height: 600px;
+        padding: 50px 50px 0 50px;
+        border: 3px solid #73450D;
+    }
+    
+</style>
