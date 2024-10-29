@@ -120,12 +120,55 @@ main {
       }
 
       .middle-About {
+        margin-top: 258px;
+        position: relative;
+        width: 100%;
+        min-height: 100vh; // 画面の高さに応じて表示
+        z-index: 10;
+        
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100%;
+          background-image: url("../../public/Okuma_Auditorium.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          left: -100px;
+          opacity: 0.5; // 背景画像の不透明度
+          z-index: -30;
+      }
+  
+      &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100%;
+          background-image: url("../../public/musical_note2.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          left: -100px;
+          opacity: 0.5; 
+          z-index: -30; 
+      }    
+            
+        
+                    
+
         .middle-Schedule_letter {
+          padding-top: 64px;
           color: #73450d;
           font-size: 32px;
           font-weight: 400;
           display: flex;
           justify-content: center;
+
           .middle-About_letter_a {
           }
           .middle-About_letter_b {
@@ -137,14 +180,125 @@ main {
           .middle-About_letter_t {
           }
         }
+
         .middle-About_points {
+          display: flex;
+          height: 182px;
+          padding-top: 50px;
+          align-items: flex-start;
+          margin-bottom: 20px;
+
           .middle-About_header {
+            width: 130px;
+            flex-shrink: 0;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative; // 親要素にpositionを指定
+
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 2px;
+              background-color: #F2911B;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+
+
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 100%;
+              height: 2px;
+              background-color: #F2911B;
+              position: absolute;
+              top: 0; 
+              left: 0;
+            }
+
+            .middle-About_number {
+              padding: 1rem;
+              font-size: 20px;
+              position: relative;
+            
+              &::after {
+                border-bottom: 3px dotted #F2911B; 
+                content: "";
+                display: block;
+                width: 70px;
+                height: 1px;
+                position: absolute;
+                bottom: -5px;
+                left: -7px;
+              }
+            
+              &::before {
+                border-bottom: 3px dotted #F2911B;
+                content: "";
+                display: block;
+                width: 130px;
+                height: 1px;
+                position: absolute;
+                top: 8px;
+                left: -36px;
+              }
+            }            
+            .middle-About_title{
+              padding: 1rem 0;
+
+              &::after{
+                border-bottom: 3px dotted #F2911B;
+                content: "";
+                display: block;
+                width: 130px;
+                height: 1px;
+                position: absolute;
+                bottom: 7px;
+                left: 0;
+              }
+              
+              
+            }
           }
           .middle-About_explanation {
+            margin: auto 0;
           }
         }
-      }
       
+
+      .middle-About_detail{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1000px;
+        padding-top: 183px;
+
+        p{
+          margin-bottom: 50px;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #73450D;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+        .middle-About_details{
+          padding-top: 22px;
+        }
+      }
+    }      
+
+
+
     } // l-containerの括弧
   } // middleの括弧
     

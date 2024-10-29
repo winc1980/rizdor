@@ -9,6 +9,10 @@ import biglogo from './images/biglogo.png';
 import Carousel from '@/components/Carousel.astro'
 import NewsData from "@/components/NewsData.astro"
 import EventData from "@/components/EventData.astro";
+import detail from "./images/detail.png";
+// import okuma_Auditorium from "./images/Okuma_Auditorium.png";
+import musical_note from "./images/detail.png";
+
 
 ---
 
@@ -63,7 +67,10 @@ import EventData from "@/components/EventData.astro";
 							<EventData />
 						</div>
 			</div>
-			<div class="middle-About">
+			
+				<div class="middle-About">
+				<div class="middle-About-overlay">
+				</div>
 				<div class="middle-Schedule_letter">
 					<p class="middle-About_letter_a">A</p>
 					<p class="middle-About_letter_b">b</p>
@@ -73,31 +80,42 @@ import EventData from "@/components/EventData.astro";
 				</div>
 				<div class="middle-About_points">
 					<div class="middle-About_header">
-						<p>01</p>
-						<p>非レギュラー制</p>
+						<p class="middle-About_number">01</p>
+						<p class="middle-About_title">非レギュラー制</p>
 					</div>
 					<p class="middle-About_explanation">つまりメンバー全員が演奏会に参加するという形をとっています。そのため、楽器を始めたての初心者でも、
 						経験者と同様にコンサートの舞台で演奏することができます。</p>
 				</div>
 				<div class="middle-About_points">
 					<div class="middle-About_header">
-						<p>02</p>
-						<p>初心者大歓迎</p>
+						<p class="middle-About_number">02</p>
+						<p class="middle-About_title">初心者大歓迎</p>
 					</div>
 					<p class="middle-About_explanation">リドールでは、初心者も多数受け付けており、現在メンバーの約3割が初心者です。中には大学までほとんど音楽をしたことのなかったメンバーや、
 						大学に入ってから別の楽器を始めてみたというメンバーもいます。リドールではこうした初心者も上級生がサポートしていきます。</p>
 				</div>
 				<div class="middle-About_points">
 					<div class="middle-About_header">
-						<p>03</p>
-						<p>インカレ生多数</p>
+						<p class="middle-About_number">03</p>
+						<p class="middle-About_title">インカレ生多数</p>
 					</div>
 					<p class="middle-About_explanation">インカレサークルのため、他大学の学生さんも大歓迎です。現在、日本女子大、立教大、東京女子大、昭和女子大、ICU、上智大、東京女子医大、
 						東京医科歯科大、武蔵野大、津田塾大、清泉女子大の学生さんも参加しています。</p>
 				</div>
+			<div class="middle-About_detail">
+				<Image src={ detail } alt="サークルの説明の画像"/>
+				<div class="middle-About_details">
+					<p>サークル名　　アンサンブル・リドール</p>
+					<p>活動場所　　　学生会館(30号館)地下1階音楽練習室</p>
+					<p>活動日　　　　毎週月/木/土, 18:15~21:30</p>
+					<p>入会費　　　　入会費なし</p>
+					<p>会費　　　　　会費は月2000円。合宿費、コンサート前などその場に応じた出費</p>
+				</div>
 				
 
 			</div>
+		</div>
+		</div>
 		</div>			
 		</section>
 
