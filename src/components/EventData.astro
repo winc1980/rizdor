@@ -3,16 +3,20 @@ import "@/scss/styles.scss";
 import { Image } from 'astro:assets';
 import picture from './images/exsample.png';
 ---
-<div class="EventData">
+    <div class="EventData">
+    <div class="EventData_left-circle"></div>
+    <div class="EventData_right-circle"></div>
     <Image src={ picture } alt="イベントの写真" class="picture"/>
     <div class="data">
     <p class="title">イベント名</p>
     <div class="date">
         <img src="" alt="">
         <p class="year">2024</p>
-        <p class="date">01/01</p>
+        <p class="date2">01/01</p>
+        <div class="lump">
         <p class="day_of_the_week">SUN</p>
         <p class="time">12:00</p>
+        </div>
     </div>
 <div class="description">
     <p>イベントの簡単な紹介や一言今年も心温まる冬のリサイタルを開催いたします。
@@ -22,7 +26,7 @@ import picture from './images/exsample.png';
     </p>
 </div>
 </div>
-
+</div>
 
     <!--
     適当に書き直してください。
@@ -39,11 +43,68 @@ import picture from './images/exsample.png';
     </div>
      -->
     <style>
+
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        .EventData_left-circle::after {
+        position: relative;
+        }
+        .EventData_left-circle::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0; 
+        width: 8px;
+        height: 8px;
+        background-color: #73450D; 
+        border-radius: 50%; 
+    }
+    .EventData_left-circle::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: 0; 
+        width: 8px;
+        height: 8px;
+        background-color: #73450D; 
+        border-radius: 50%; 
+    }
+        .EventData_right-circle::after {
+            position: relative;
+        }
+        .EventData_right-circle::before {
+            position: relative;
+        }
+
+        .EventData_right-circle::after {
+            content: "";
+            position: absolute;
+            bottom: -4px; 
+            right: 0; 
+            width: 8px; 
+            height: 8px; 
+            background-color: #73450D; 
+            border-radius: 50%; 
+        }
+        .EventData_right-circle::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        right: 0; 
+        width: 8px;
+        height: 8px;
+        background-color: #73450D; 
+        border-radius: 50%; 
+    }
+
         .EventData{
             position: relative;
             display: flex;
             padding-left: 5%;
-            box-sizing: border-box; 
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
         
         .EventData::before {
@@ -73,27 +134,41 @@ import picture from './images/exsample.png';
             }
             .data {
                 max-width: 63%;
-                padding: 50px 0 50px 10%; /* カンマではなくスペースで区切る */
+                padding: 50px 0 50px 10%; 
+            }
+            .date{
+                display: flex;
+                position: relative;
+                left: -13px;
+            }
 
             .title{
                 font-size: 20px;
                 font-weight: 400;
                 color: #73450D;
             }
-            .date{
+            .date2{
                 font-size: 35px;
 
             }
             .year{
-                font-size: 14px
-
-            }.day_of_the_week{
                 font-size: 14px;
+                position: relative;
+                left: -10px;
+                top: 2px;
+                transform: rotate(90deg);
+            }
+                
+        
+                
+
+            .day_of_the_week{
+                font-size: 15px;
+                padding-top: 5px;
             }
             .time{
-                font-size: 14px;
+                font-size: 15px;
             }
-        }
     </style>
 
 

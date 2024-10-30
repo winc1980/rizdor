@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vue from "@astrojs/vue"; // Vueのインテグレーションをインポート
+import vue from "@astrojs/vue"; 
+import react from "@astrojs/react"; 
 
-// https://astro.build/config
 export default defineConfig({
   vite: {
     resolve: {
@@ -12,10 +12,12 @@ export default defineConfig({
     }
   },
   build: {
-    format: "preserve" // NOTE: 出力ファイルの設定
+    format: "preserve"
   },
   integrations: [
-    tailwind(),  
-    vue()        
+    tailwind(),
+    vue(),
+    react() 
   ]
 });
+

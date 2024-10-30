@@ -1,19 +1,27 @@
 ---
 import { Image } from 'astro:assets';
 import image from './images/image.png';
+
+const { width = '500px', height = 'auto', marginbottom = '0px' } = Astro.props;
 ---
-<!-- blog title等々、CMSから読み込むときに書き換えてください。 -->
- <div class="blog">
-<Image src={image} alt="CMSから読み込んだ画像" /> 
-<p class="title">簡単なタイトル「・・・・」</p>
-<p class="date">yyyy.mm.dd</p>
+
+<div class="blog_component" style={`width: ${width}; height: ${height}; margin-bottom: ${marginbottom};`}>
+    <Image src={image} alt="CMSから読み込んだ画像" /> 
+    <p class="title">簡単なタイトル「・・・・」</p>
+    <p class="date">yyyy.mm.dd</p>
 </div>
+
 <style>
-    .blog{
-        width: 500px;
-        height: 600px;
-        padding: 50px 50px 0 50px;
+    .blog_component {
+        padding: 10% 10% 0 10%;
         border: 3px solid #73450D;
+        /* padding-bottom の競合を回避するための例 */
     }
-    
+    .title{
+        padding: 15px 0 5px 0;
+    }
+    .date{
+        padding: 10px 0 25px 0;
+
+    }
 </style>

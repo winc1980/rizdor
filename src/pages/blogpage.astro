@@ -4,63 +4,37 @@ import { Image } from 'astro:assets';
 import image from './images/image.png';
 const title = "早稲田大学アンサンブル・リドール Blogページ";
 import Blog from '@/components/blog.astro';
+import AddBlogsScript from '@/components/AddBlogsScript.jsx';
 ---
+
 <Layout title={title}>
     <main>
-        <div class="l-container">
-        <div class="middle-Blog_letter">
-            <p class="middle-Blog_letter_b">B</p>
-            <p class="middle-Blog_letter_l">l</p>
-            <p class="middle-Blog_letter_o">o</p>
-            <p class="middle-Blog_letter_g">g</p>
+        <div class="blog_l-container">
+            <div class="middle-Blog_letter">
+                <p class="middle-Blog_letter_b">B</p>
+                <p class="middle-Blog_letter_l">l</p>
+                <p class="middle-Blog_letter_o">o</p>
+                <p class="middle-Blog_letter_g">g</p>
             </div>
             <p>
                 私のライブや音楽活動の様子をブログで発信しています！コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、日々の活動を詳しくお届けしています。音楽に対する思いや、新しいチャレンジについても書いているので、ぜひチェックしてみてください。ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
             </p>  
-            <div class="blog">
-        <div class="left_side">
-            <Blog />
-            <Blog />
-            <Blog />
-        </div>  
-        <div class="right_side">
-            <Blog />
-            <Blog />
-            <Blog />
-        </div>    
+            <div class="blog_view" id="blog-container">
+                <div class="left_side">
+                    <Blog marginbottom="120px"/>
+                    <Blog marginbottom="120px"/>
+                    <Blog />
+                </div>  
+                <div class="right_side">
+                    <Blog marginbottom="120px"/>
+                    <Blog marginbottom="120px"/>
+                    <Blog />
+                </div>    
+            </div>
+            <div class="blog_link_decoration">
+                <button id="load-more" class="blog_link_more">More</button>     
+            </div>
         </div>
-        <a href="">More</a>     
-    </div>
     </main>
+    <AddBlogsScript client:load /> <!-- client:loadで実行 -->
 </Layout>
-
-<style>
-    .l-container{
-        max-width: 86%;
-        width: 100%;
-        margin: 0 auto;
-    }
-    .middle-Blog_letter {
-          color: #73450d;
-          font-size: 32px;
-          font-weight: 400;
-          display: flex;
-          justify-content: center;
-          padding-top: 85px;
-          padding-bottom: 85px;
-
-          &.middle-Blog_letter_b {
-          }
-          &.middle-Blog_letter_l {
-          }
-          &.middle-Blog_letter_o {
-          }
-          &.middle-Blog_letter_g {
-          }
-        }
-        .blog{
-            padding-top: 200px;
-            display: flex;
-            justify-content: space-between;
-        }
-</style>
