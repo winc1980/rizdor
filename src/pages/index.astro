@@ -4,13 +4,12 @@ import { Image } from 'astro:assets';
 import logo from './images/logo.png';
 const title = "早稲田大学アンサンブル・リドール";
 const description = "早稲田大学公認音楽サークル「アンサンブル リドール」オフィシャルウェブサイト。ポップスからジャズ、ラテンやオーケストラまで幅広いジャンルで活動。";
-const og_image = { logo }; // 表示されない
+const og_image = { logo }; 
 import biglogo from './images/biglogo.png';
 import Carousel from '@/components/Carousel.astro'
 import NewsData from "@/components/NewsData.astro"
 import EventData from "@/components/EventData.astro";
 import detail from "./images/detail.png";
-// import okuma_Auditorium from "./images/Okuma_Auditorium.png";
 import Blog from "@/components/blog.astro";
 ---
 
@@ -18,7 +17,13 @@ import Blog from "@/components/blog.astro";
 	<main>
 		<section id="top" class="top">
 			<div class="top-logos">
+			<div class="top-logos_line">
 			<h1>早稲田公認音楽サークル</h1>
+			</div>
+			<span class="top-logos_overline1"></span>
+			<span class="top-logos_overline2"></span>
+			<span class="top-logos_underline1"></span>
+			<span class="top-logos_underline2"></span>
 			<Image src={ biglogo } alt="大きなロゴ"/>
 			<h2>アンサンブル・リドール</h1>
 			</div>
@@ -59,7 +64,7 @@ import Blog from "@/components/blog.astro";
 						<p class="middle-Schedule_letter_l">l</p>
 						<p class="middle-Schedule_letter_e2">e</p>
 						</div>
-						<div class="kari">
+						<div class="middle-Schedule_eventdata">
 							<EventData />
 							<EventData />
 							<EventData />
@@ -69,7 +74,7 @@ import Blog from "@/components/blog.astro";
 				<div class="middle-About">
 				<div class="middle-About-overlay">
 				</div>
-				<div class="middle-Schedule_letter">
+				<div class="middle-About_letter">
 					<p class="middle-About_letter_a">A</p>
 					<p class="middle-About_letter_b">b</p>
 					<p class="middle-About_letter_o">o</p>
@@ -101,18 +106,31 @@ import Blog from "@/components/blog.astro";
 						東京医科歯科大、武蔵野大、津田塾大、清泉女子大の学生さんも参加しています。</p>
 				</div>
 			<div class="middle-About_detail">
-				<Image src={ detail } alt="サークルの説明の画像"/>
+				<Image src={ detail } alt="サークルの説明の画像" class="middle-About_image"/>
 				<div class="middle-About_details">
-					<p>サークル名　　アンサンブル・リドール</p>
-					<p>活動場所　　　学生会館(30号館)地下1階音楽練習室</p>
-					<p>活動日　　　　毎週月/木/土, 18:15~21:30</p>
-					<p>入会費　　　　入会費なし</p>
-					<p>会費　　　　　会費は月2000円。合宿費、コンサート前などその場に応じた出費</p>
+				<div class="middle-About_details1">
+					<p class="middle-About_details1_title">サークル名</p>
+					<p>アンサンブル・リドール</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">活動場所</p>
+					<p>学生会館(30号館)地下1階音楽練習室</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">活動日</p>
+					<p>毎週月/木/土, 18:15~21:30</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">入会費</p>
+					<p>入会費なし</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">会費</p>
+					<p>会費は月2000円。合宿費、コンサート前などその場に応じた出費</p>
+				</div>
+				</div>
 				</div>
 				
-
-			</div>
-		</div>
 		<div class="middle-Blog">
 			<div class="middle-Blog_letter">
 				<p class="middle-Blog_letter_b">B</p>
@@ -130,10 +148,12 @@ import Blog from "@/components/blog.astro";
 						皆さんからのコメントや応援がいつも大きな励みになっています。<br>
 						ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
 					</p>
+					<div class="middle-Blog_link-lump">
 					<a href="/blogpage" class="middle-Blog_link">Blog Page →</a>
 					</div>
+					</div>
 					<div class="middle-Blog_the-most-least-one">
-						<Blog />
+						<Blog width="30vw" />
 					</div>
 				</div>
 		</div>
