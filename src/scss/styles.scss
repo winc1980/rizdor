@@ -440,9 +440,9 @@ main {
             &::before {
               content: "";
               position: absolute;
-              top: 5px; 
+              top: 5px;
               left: -15px;
-              width: 180px; 
+              width: 180px;
               height: 1.2px;
               background-color: #f2911b;
             }
@@ -457,8 +457,8 @@ main {
                 width: 2px;
                 height: 45px;
                 position: absolute;
-                top: 14px; 
-                right: -5px; 
+                top: 14px;
+                right: -5px;
                 background-color: #f2911b;
               }
 
@@ -469,7 +469,7 @@ main {
                 height: 45px;
                 position: absolute;
                 top: -5px;
-                left: -8px; 
+                left: -8px;
                 background-color: #f2911b;
               }
             }
@@ -532,61 +532,139 @@ main {
       justify-content: space-between;
       padding-bottom: 78px;
     }
+  }
+}
 
-      .blog_link_decoration {
+// -------------------------------blogpageコンポーネントここまで----------------------------------------
+//--------------------------------seemoreコンポーネントここから---------------------------------------
+.showMore {
+  --mask-height: 0px;
+  --transition-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --transition-duration: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+    .showMore_btn {
+      position: relative;
+      display: block;
+      order: 2;
+      width: 70px;
+      height: 50px;
+      font-size: 32px;
+      cursor: pointer;
+      background-color: transparent;
+      border-radius: 25px;
+      left: 47%;
+      margin-bottom: 44px;
+
+      &::before {
+        content: "More";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .showMore_top_and_bottom {
         position: relative;
         margin-left: 47%;
-        padding-bottom: 44px;
-
+        
+      
         &::after {
           content: "";
           position: absolute;
           bottom: -3px;
-          left: 18px;
+          left: -21px;
           width: 80px;
           height: 1.4px;
           background-color: #f2911b;
-          transform: translateY(-44px);
+          transform: translateY(48px);
         }
-
+      
         &::before {
           content: "";
           position: absolute;
-          top: 5px; 
-          left: -18px;
-          width: 80px; 
+          top: 5px;
+          left: -55px;
+          width: 80px;
           height: 1.2px;
           background-color: #f2911b;
         }
-
-        .blog_link_more {
-          font-size: 32px;
+        .showMore_left_and_right {
           position: relative;
-
+      
           &::after {
             content: "";
             display: block;
             width: 2px;
             height: 45px;
             position: absolute;
-            top: 14px; 
-            right: -5px; 
+            top: 13px;
+            left: 50px;
             background-color: #f2911b;
           }
-
+      
           &::before {
             content: "";
             display: inline-block;
             width: 2px;
             height: 45px;
             position: absolute;
-            top: -5px;
-            left: -8px;
+            top: -2px;
+            left: -47px;
             background-color: #f2911b;
           }
-        }
         }
       }
     }
 
-// -------------------------------blogpageコンポーネントここまで----------------------------------------
+.showMore_trigger {
+  display: none;
+
+  &:checked {
+    + .showMore_btn {
+      &::before {
+        content: "Close";
+      }
+    }
+  }
+}
+
+.showMore_contentWrapper {
+  position: relative;
+  order: 1;
+  max-height: var(--mask-height);
+  overflow: hidden;
+  transition: max-height var(--transition-duration) var(--transition-easing);
+
+  &::before {
+    display: none;
+  }
+
+  .showMore_content {
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 78px;
+  }
+}
+
+.showMore_trigger {
+  display: none;
+
+  &:checked {
+    + .showMore_btn {
+      &::after {
+        display: none;
+      }
+    }
+
+    ~ .showMore_contentWrapper {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+//--------------------------------seemoreコンポーネントここまで---------------------------------------
