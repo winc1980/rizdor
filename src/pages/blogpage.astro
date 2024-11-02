@@ -1,10 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { Image } from 'astro:assets';
-import image from './images/image.png';
-const title = "早稲田大学アンサンブル・リドール Blogページ";
 import Blog from '@/components/blog.astro';
-import AddBlogsScript from '@/components/AddBlogsScript.jsx';
+import ShowMore from '@/components/ShowMore.astro';
+const title = "早稲田大学アンサンブル・リドール Blogページ";
 ---
 
 <Layout title={title}>
@@ -17,7 +15,7 @@ import AddBlogsScript from '@/components/AddBlogsScript.jsx';
                 <p class="middle-Blog_letter_g">g</p>
             </div>
             <p>
-                私のライブや音楽活動の様子をブログで発信しています！コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、日々の活動を詳しくお届けしています。音楽に対する思いや、新しいチャレンジについても書いているので、ぜひチェックしてみてください。ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
+                私のライブや音楽活動の様子をブログで発信しています！コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、日々の活動を詳しくお届けしています。
             </p>  
             <div class="blog_view" id="blog-container">
                 <div class="left_side">
@@ -31,10 +29,7 @@ import AddBlogsScript from '@/components/AddBlogsScript.jsx';
                     <Blog />
                 </div>    
             </div>
-            <div class="blog_link_decoration">
-                <button id="load-more" class="blog_link_more">More</button>     
-            </div>
+            <ShowMore />
         </div>
     </main>
-    <AddBlogsScript client:load /> <!-- client:loadで実行 -->
 </Layout>
