@@ -13,9 +13,13 @@ const { width = '500px', height = 'auto', marginbottom = '0px' } = Astro.props;
 
 <style>
     .blog_component {
+        display: inline-block; /* コンポーネントのサイズを画像に合わせる */
         padding: 10% 10% 0 10%;
         border: 3px solid #73450D;
-        /* padding-bottom の競合を回避するための例 */
+    }
+    .image {
+        max-width: 100%; /* 画像が親要素に収まるようにする */
+        height: auto; /* 高さを自動で調整 */
     }
     .title{
         padding: 15px 0 5px 0;
