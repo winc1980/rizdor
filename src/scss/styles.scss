@@ -74,7 +74,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
     background-color: #f2f2f2;
     display: none;
@@ -273,6 +273,26 @@ main {
     }
 
     @media (max-width: 550px) {
+      .middle-News_letter {
+        color: #73450d;
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+  
+        .middle-News_letter_n {
+          transform: translate(-3px, -3px) rotate(-25.92deg);
+        }
+        .middle-News_letter_e {
+          transform: translate(3px, -9px) rotate(-7.84deg);
+        }
+        .middle-News_letter_w {
+          transform: translate(9px, -9px) rotate(11.25deg);
+        }
+        .middle-News_letter_s {
+          transform: translate(13px, -3px) rotate(29.33deg);
+        }
+      }
       .middle-News_box {
         display: block;
         .middle-News_box-left{
