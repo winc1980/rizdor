@@ -26,5 +26,35 @@ import instagram from './images/instagram.png';
                     </a>
                 </li>
     </ul>
+    <div class="burger">
+        <div class="burger_menu">
+            <div class="content-wrapper">
+            <ul class="burger_navbar">
+                <li class="nav-link"><a href="/blogpage">Blog</a></li>
+                <li class="nav-link"><a href="">Schedule</a></li>
+                <li class="nav-link"><a href="">Concert</a></li>
+            </ul>
+            <ul class="burger_sns">
+                <li>
+                    <a href="https://twitter.com/ens_rizdor">
+                        <Image src={ x } alt="x.comのアイコン">
+                            </a>
+                        </li>
+                <li>
+                    <a href="https://www.instagram.com/ens_rizdor">
+                        <Image src={ instagram } alt="instagram.comのアイコン">
+                            </a>
+                        </li>
+            </ul>
+        </div>
+        </div>        
+    </div>
     </nav>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(".burger").click(function(){
+        $(".burger").toggleClass("is-active");
+        $(".burger_menu").toggleClass("is-active");
+        });
+    </script>
 </header>
