@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import JS1 from './images/JS-1.png';
+import JS2 from './images/JS-2.png';
+import JS3 from './images/JS-3.png';
+import JS4 from './images/red.jpg';
+import JS5 from './images/blue.jpg';
+import JS6 from './images/yellow.jpg';
+---
+<div class="bg-image-loop">
+  <Image src={JS1} alt="JS1"/> <!-- 元々の写真にカルーセルのメニューが写ってしまっているので、ないものに後で差し替える -->
+  <Image src={JS2} alt="JS2"/>
+  <Image src={JS3} alt="JS3"/>
+  <Image src={JS4} alt="JS4"/>
+  <Image src={JS5} alt="JS5"/>
+  <Image src={JS6} alt="JS6"/>
+  <Image src={JS1} alt="JS1"/>
+  <Image src={JS2} alt="JS2"/>
+  <Image src={JS3} alt="JS3"/>
+</div>
+
+<style>
+  .bg-image-loop {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin: 80px 0;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .bg-image-loop img {
+    height: 500px;
+    width: 700px;
+    flex-shrink: 0;
+    animation: bg-slider 100s linear infinite;
+    border-radius: 10px;
+  }
+
+  @keyframes bg-slider {
+    from { transform: translateX(0); }
+    to { transform: translateX(-4380px); } 
+  }
+
+  /* レスポンシブ対応は後でやります。 */
+  
+</style>

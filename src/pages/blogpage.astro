@@ -1,0 +1,35 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Blog from '@/components/blog.astro';
+import ShowMore from '@/components/ShowMore.astro';
+const title = "早稲田大学アンサンブル・リドール Blogページ";
+---
+
+<Layout title={title}>
+    <main>
+        <div class="blog_l-container">
+            <div class="middle-Blog_letter">
+                <p class="middle-Blog_letter_b">B</p>
+                <p class="middle-Blog_letter_l">l</p>
+                <p class="middle-Blog_letter_o">o</p>
+                <p class="middle-Blog_letter_g">g</p>
+            </div>
+            <p>
+                私のライブや音楽活動の様子をブログで発信しています！コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、日々の活動を詳しくお届けしています。
+            </p>  
+            <div class="blog_view" id="blog-container">
+                <div class="left_side">
+                    <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
+                    <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
+                    <Blog width = '35vw', height = 'auto'/>
+                </div>  
+                <div class="right_side">
+                    <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
+                    <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
+                    <Blog width = '35vw', height = 'auto'/>
+                </div>    
+            </div>
+            <ShowMore />
+        </div>
+    </main>
+</Layout>
