@@ -1,0 +1,14 @@
+---
+import "@/scss/styles.scss";
+import { Image } from 'astro:assets';
+import image from './images/image.png';
+
+const { width = '500px', height = 'auto', marginbottom = '0px' } = Astro.props;
+---
+
+<div class="blog_component" style={`width: ${width}; height: ${height}; margin-bottom: ${marginbottom};`}>
+    <Image src={image} alt="CMSから読み込んだ画像" /> 
+    <p class="title">簡単なタイトル「・・・・」</p>
+    <p class="date">yyyy.mm.dd</p>
+</div>
+

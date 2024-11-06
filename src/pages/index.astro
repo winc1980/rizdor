@@ -1,12 +1,189 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-const title = "";
-const description = "";
-const og_image = "";
+import { Image } from 'astro:assets';
+import logo from './images/logo.png';
+const title = "早稲田大学アンサンブル・リドール";
+const description = "早稲田大学公認音楽サークル「アンサンブル リドール」オフィシャルウェブサイト。ポップスからジャズ、ラテンやオーケストラまで幅広いジャンルで活動。";
+const og_image = { logo }; 
+import biglogo from './images/biglogo.png';
+import Carousel from '@/components/Carousel.astro'
+import NewsData from "@/components/NewsData.astro"
+import EventData from "@/components/EventData.astro";
+import detail from "./images/detail.png";
+import Blog from "@/components/blog.astro";
 ---
 
 <Layout title={title} , description={description} og_image={og_image}>
 	<main>
+		<section id="top" class="top">
+			<div class="top-logos">
+			<div class="top-logos_line">
+			<h1>早稲田公認音楽サークル</h1>
+			</div>
+			<span class="top-logos_overline1"></span>
+			<span class="top-logos_overline2"></span>
+			<span class="top-logos_underline1"></span>
+			<span class="top-logos_underline2"></span>
+			<Image src={ biglogo } alt="大きなロゴ"/>
+			<h2>アンサンブル・リドール</h1>
+			</div>
+			<div class="top-JS"> <!-- ナビゲーション,インジケーターもつける -->	
+				<Carousel />		  
+			</div>
+		</section>
+		<section id="middle" class="middle">
+			<div class="middle-l-container">
+			<div class="middle-background_img">
+			<div class="middle-News">
+			<div class="middle-News_letter">
+				<p class="middle-News_letter_n">N</p>
+				<p class="middle-News_letter_e">e</p>
+				<p class="middle-News_letter_w">w</p>
+				<p class="middle-News_letter_s">s</p>
+				</div>
+				<div class="middle-News_box">
+				<div class="middle-News_box-left">
+				<NewsData />
+				<NewsData />
+				<NewsData />
+				</div>
+				<div class="middle-News_box-right">
+				<NewsData />
+				<NewsData />
+				<NewsData />
+				</div>
+				<div class="middle-News_box_add">
+				<NewsData />
+				</div>
+				</div>
+			</div>
+			<div class="middle-Schedule">
+					<div class="middle-Schedule_letter">
+						<p class="middle-Schedule_letter_s">S</p>
+						<p class="middle-Schedule_letter_c">c</p>
+						<p class="middle-Schedule_letter_h">h</p>
+						<p class="middle-Schedule_letter_e1">e</p>
+						<p class="middle-Schedule_letter_d">d</p>
+						<p class="middle-Schedule_letter_u">u</p>
+						<p class="middle-Schedule_letter_l">l</p>
+						<p class="middle-Schedule_letter_e2">e</p>
+						</div>
+						<div class="middle-Schedule_eventdata">
+							<div class="middle-Schedule_eventdata1">
+								<EventData />
+							</div>
+							<div class="middle-Schedule_eventdata2">
+								<EventData />
+							</div>
+							<div class="middle-Schedule_eventdata3">
+								<EventData />
+							</div>
+						</div>
+			</div>
+			
+				<div class="middle-About">
+				<div class="middle-About-overlay">
+				</div>
+				<div class="middle-About_letter">
+					<p class="middle-About_letter_a">A</p>
+					<p class="middle-About_letter_b">b</p>
+					<p class="middle-About_letter_o">o</p>
+					<p class="middle-About_letter_u">u</p>
+					<p class="middle-About_letter_t">t</p>
+				</div>
+				<div class="middle-About_points">
+					<div class="middle-About_lump">
+					<div class="middle-About_header">
+						<p class="middle-About_number">01</p>
+						<p class="middle-About_title">非レギュラー制</p>
+					</div>
+					<p class="middle-About_title_responsive">非レギュラー制</p>
+				</div>
+					<p class="middle-About_explanation">つまりメンバー全員が演奏会に参加するという形をとっています。そのため、楽器を始めたての初心者でも、
+						経験者と同様にコンサートの舞台で演奏することができます。</p>
+				</div>
+				<div class="middle-About_points">
+					<div class="middle-About_lump">
+					<div class="middle-About_header">
+						<p class="middle-About_number">02</p>
+						<p class="middle-About_title">初心者大歓迎</p>
+					</div>
+					<p class="middle-About_title_responsive">初心者大歓迎</p>
+				</div>
+					<p class="middle-About_explanation">リドールでは、初心者も多数受け付けており、現在メンバーの約3割が初心者です。中には大学までほとんど音楽をしたことのなかったメンバーや、
+						大学に入ってから別の楽器を始めてみたというメンバーもいます。リドールではこうした初心者も上級生がサポートしていきます。</p>
+				</div>
+				<div class="middle-About_points">
+					<div class="middle-About_lump">
+					<div class="middle-About_header">
+						<p class="middle-About_number">03</p>
+						<p class="middle-About_title">インカレ生多数</p>
+					</div>
+					<p class="middle-About_title_responsive">インカレ生多数</p>
+				</div>
+					<p class="middle-About_explanation">インカレサークルのため、他大学の学生さんも大歓迎です。現在、日本女子大、立教大、東京女子大、昭和女子大、ICU、上智大、東京女子医大、
+						東京医科歯科大、武蔵野大、津田塾大、清泉女子大の学生さんも参加しています。</p>
+				</div>
+			<div class="middle-About_detail">
+				<div class="middle-About_image_wrapper">
+				<Image src={ detail } alt="サークルの説明の画像" class="middle-About_image"/>
+			</div>
+				<div class="middle-About_details">
+				<div class="middle-About_details1">
+					<p class="middle-About_details1_title">サークル名</p>
+					<p>アンサンブル・リドール</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">活動場所</p>
+					<p>学生会館(30号館)地下1階音楽練習室</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">活動日</p>
+					<p>毎週月/木/土, 18:15~21:30</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">入会費</p>
+					<p>入会費なし</p>
+				</div>
+					<div class="middle-About_details1">
+					<p class="middle-About_details1_title">会費</p>
+					<p>会費は月2000円。合宿費、コンサート前などその場に応じた出費</p>
+				</div>
+				</div>
+				</div>
+			</div>
+				
+		<div class="middle-Blog">
+			<div class="middle-Blog_letter">
+				<p class="middle-Blog_letter_b">B</p>
+				<p class="middle-Blog_letter_l">l</p>
+				<p class="middle-Blog_letter_o">o</p>
+				<p class="middle-Blog_letter_g">g</p>
+				</div>
+				<div class="middle-Blog_about">
+					<div class="middle-Blog_pa">
+					<p class="middle-Blog_p">
+						私のライブや音楽活動の様子をブログで発信しています！<br>
+						コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、
+						日々の活動を詳しくお届けしています。音楽に対する思いや、
+						新しいチャレンジについても書いているので、ぜひチェックしてみてください。
+						皆さんからのコメントや応援がいつも大きな励みになっています。<br>
+						ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
+					</p>
+					<div class="middle-Blog_the-most-least-one_responsive">
+						<Blog width="60vw" />
+					</div>
+					<div class="middle-Blog_link-lump">
+					<a href="/blogpage" class="middle-Blog_link">Blog Page →</a>
+					</div>
+					</div>
+					<div class="middle-Blog_the-most-least-one">
+						<Blog width="30vw"/>
+					</div>
+				</div>
+		</div>
+
+		</section>
 
 	</main>
 </Layout>
