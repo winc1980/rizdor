@@ -1,3 +1,42 @@
 ---
+import { Image } from 'astro:assets';
+import gallary1 from './images/gallary1.jpg';
+import gallary2 from './images/gallary2.jpg';
+import gallary3 from './images/gallary3.jpg';
+import gallary4 from './images/gallary4.jpg';
+import gallary5 from './images/gallary5.jpg';
 ---
-<h1>gallary</h1>
+
+<div class="gallary">
+  <h1>gallary</h1>
+  <div class="gallary_layer">
+    <div class="image-container big">
+      <iframe src="https://www.youtube-nocookie.com/embed/eX-j--8Mzvg?si=1YQgnWv0xf1qcFuD&amp;controls=0" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen 
+        class="content"></iframe>
+    </div>
+    <div class="image-container small">
+      <Image src={gallary1} alt="gallaryの一枚目の写真" class="content" />
+    </div>
+  </div>
+  <div class="gallary_layer">
+    <div class="image-container small">
+      <Image src={gallary2} alt="gallaryの二枚目の写真" class="content" />
+    </div>
+    <div class="image-container big">
+      <Image src={gallary3} alt="gallaryの三枚目の写真" class="content" />
+    </div>
+  </div>
+  <div class="gallary_layer">
+    <div class="image-container big">
+      <Image src={gallary4} alt="gallaryの四枚目の写真" class="content" />
+    </div>
+    <div class="image-container small">
+      <Image src={gallary5} alt="gallaryの五枚目の写真" class="content" />
+    </div>
+  </div>
+</div>
