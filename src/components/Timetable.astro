@@ -1,5 +1,6 @@
 ---
 import Event from '@/components/Event.astro'
+const { height = '300px', top = '12px' } = Astro.props;
 ---
 
 <div class="time_table">
@@ -7,8 +8,8 @@ import Event from '@/components/Event.astro'
     <div class="time_table_lump">
         <h2>11.11（日）</h2>
         <div class="time_table_time">            
-            <Event height="300px", top="12px" /> <!-- 予定が変わったら簡単に調節できるように -->
-            <Event height="300px", top="390px" />
+            <Event height="302px", top="12px" /> <!-- 予定が変わったら簡単に調節できるように -->
+            <Event height="302px", top="390px" />
                 <p class="time">10:00</p>
                 <p class="time">11:00</p>
                 <p class="time">12:00</p>
@@ -18,4 +19,6 @@ import Event from '@/components/Event.astro'
         </div>
     </div>
 </div>
+
+
 

@@ -1,0 +1,52 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Timetable from "@/components/Timetable.astro";
+const title = "早稲田大学アンサンブル・リドール concertページ";
+import headerimg from './images/convert_header.png'
+import Gallary from '@/components/Gallary.astro'
+import { Image } from "astro:assets";
+---
+<Layout title={title}>
+    <main>
+        <div class="concert-header">
+            <div class="concert-header_detail">
+                <div class="concert-header_title">
+                    <h2>Summer Concert</h2>
+                    <p>サマーコンサート</p>
+                </div>
+                <div class="concert-header_detail_about">
+                    <p class="concert-header_detail_info">無料入場・自由席<br/> チケット等の予約は必要ありません<br/> ご来場お待ちしています！</p>
+                    <p class="concert-header_detail_where">所沢市民文化センター </br>ミューズ 中ホール</p>
+                    <p class="concert-header_detail_date">11/11 （日）１１時開演</p>
+                </div>
+            </div>
+            <div class="concert-header_image">
+            <Image src={ headerimg } alt="concertのheader内の写真" />
+        </div>
+        </div>
+        <div class="concert_l-container">
+        <div class="concert_introduction">
+            <h1>Introduction</h1>
+            <p>
+                リドールの夏の演奏会、サマーコンサート、（通称サマコン）が、今年も光が丘のIMAホールで行われます！<br/>
+                4月に新入生44人を迎えて以降、初となる新体制での今回のステージ。<br/>
+                フルバン構成の第1部と第3部では、Mrs. GREEN APPLEの軽快な夏ソング｢サママ・フェスティバル｣や、サックスの巨匠ウェイン・ショーターによる<br/>
+                ジャズナンバー｢Black Nile｣などを含む全10曲を、<br/>
+                第2部ではサックス・トランペット・トロンボーンなどが中心のホーンコンボや、<br/>
+                バイオリン・フルート・クラリネットなどが中心の弱音コンボなどの少人数編成のバンドで、思わず口ずさみたくなる郷ひろみの名曲、<br/>
+                ｢２億４千万の瞳－エキゾチック・ジャパン－｣などを含む全5曲を演奏いたします。<br/>
+                もちろん15曲全て、当サークル員によるオリジナルのアレンジです！<br/>
+                ｢お祭り｣をテーマにしたサークル員おそろいの紺色のTシャツや譜面台装飾、ホール入口に掲示されている立て看板、<br/>
+                パートごとの個性溢れる装飾にもご注目ください。<br/>
+                リドールのサマコンで、最高の夏のスタートをきりましょう🎵サークル員一堂、皆様にお会いできるのを心待ちにしております。<br/>
+            </p>
+        </div>
+        <Timetable />
+        </div>
+        <Gallary />
+    </main>
+</Layout>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=MonteCarlo&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
