@@ -11,6 +11,7 @@ import NewsData from "@/components/NewsData.astro"
 import EventData from "@/components/EventData.astro";
 import detail from "./images/detail.png";
 import Blog from "@/components/blog.astro";
+import Bloglink from "@/components/blog_link.astro";
 ---
 
 <Layout title={title} , description={description} og_image={og_image}>
@@ -147,7 +148,7 @@ import Blog from "@/components/blog.astro";
 				</div>
 					<div class="middle-About_details1">
 					<p class="middle-About_details1_title">会費</p>
-					<p>会費は月2000円。合宿費、コンサート前などその場に応じた出費</p>
+					<p class="middle-About_details_fee">会費は月2000円。合宿費、コンサート前などその場に応じた出費</p>
 				</div>
 				</div>
 				</div>
@@ -173,9 +174,7 @@ import Blog from "@/components/blog.astro";
 					<div class="middle-Blog_the-most-least-one_responsive">
 						<Blog width="60vw" />
 					</div>
-					<div class="middle-Blog_link-lump">
-					<a href="/blogpage" class="middle-Blog_link">Blog Page →</a>
-					</div>
+					<Bloglink />
 					</div>
 					<div class="middle-Blog_the-most-least-one">
 						<Blog width="30vw"/>

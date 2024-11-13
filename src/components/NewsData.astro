@@ -1,4 +1,5 @@
 ---
+// CMSを組み込むときに書き換えてください
 ---
  <div class="box">
     <div class="News_box">
@@ -28,6 +29,28 @@
         }
         .date{
             color: #0000FF;
+        }
+        @media (max-width:550px) {
+            .box{
+            padding-top: 15px;
+        }
+        .News_box{
+              height: 55px;
+              background-color: #ffffff;
+              border-radius: 10px;
+              box-shadow: 2px 2px 0px 0 rgb(115, 69, 13);
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 20px;
+            padding-top: 0;
+    
+        }
+        .date{
+            color: #0000FF;
+            padding-top: 6px;
+        }            
         }
     </style>
     
