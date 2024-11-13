@@ -80,7 +80,7 @@ header {
     background-color: #9a7a54;
     display: none;
     z-index: 15;
-    color: #FFFFFF;
+    color: #ffffff;
 
     &.is-active {
       background-size: 70px;
@@ -107,7 +107,7 @@ header {
 
         a {
           font-size: 4.5vw;
-          color: #FFFFFF;
+          color: #ffffff;
           text-decoration: none;
         }
       }
@@ -276,7 +276,7 @@ main {
       .middle-News {
         padding-top: 60px;
       }
-  
+
       .middle-News_letter {
         color: #73450d;
         font-size: 16px;
@@ -599,9 +599,8 @@ main {
           }
         }
 
-        
         .middle-About_points {
-          display: block; 
+          display: block;
           padding-top: 20px;
           .middle-About_lump {
             display: flex;
@@ -688,7 +687,6 @@ main {
         }
       }
     }
-    
 
     .middle-Blog {
       padding-top: 120px;
@@ -758,7 +756,7 @@ main {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding-top:0;
+          padding-top: 0;
 
           .middle-Blog_pa {
             margin-top: 35px;
@@ -895,61 +893,60 @@ main {
   background-color: #f2911b;
 }
 
-
 @media (max-width: 600  px) {
-.middle-Blog_link-lump {
-  position: relative;
-  padding:0;
-  margin-left: 0;
-}
+  .middle-Blog_link-lump {
+    position: relative;
+    padding: 0;
+    margin-left: 0;
+  }
 
-.middle-Blog_link-lump::after {
-  content: "";
-  position: absolute;
-  bottom: -0.5vw;
-  left: 8vw;
-  width: 80%;
-  height: 1px;
-  background-color: #f2911b;
-}
+  .middle-Blog_link-lump::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5vw;
+    left: 8vw;
+    width: 80%;
+    height: 1px;
+    background-color: #f2911b;
+  }
 
-.middle-Blog_link-lump::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -2vw;
-  width: 80%; 
-  height: 1px;
-  background-color: #f2911b;
-}
+  .middle-Blog_link-lump::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2vw;
+    width: 80%;
+    height: 1px;
+    background-color: #f2911b;
+  }
 
-.middle-Blog_link {
-  font-size: 5vw;
-  position: relative;
-  padding: 0;
-}
+  .middle-Blog_link {
+    font-size: 5vw;
+    position: relative;
+    padding: 0;
+  }
 
-.middle-Blog_link::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 80%; 
-  position: absolute;
-  top: 3vw;
-  right: -1vw; 
-  background-color: #f2911b;
-}
+  .middle-Blog_link::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    top: 3vw;
+    right: -1vw;
+    background-color: #f2911b;
+  }
 
-.middle-Blog_link::before {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 80%; 
-  position: absolute;
-  top: -1vw;
-  left: -1vw; 
-  background-color: #f2911b;
-}
+  .middle-Blog_link::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    top: -1vw;
+    left: -1vw;
+    background-color: #f2911b;
+  }
 }
 //-------------------
 
@@ -957,7 +954,7 @@ main {
 .concert-header {
   color: #ffffff;
   display: flex;
-  height: 35vw; 
+  height: 35vw;
 
   .concert-header_detail {
     background-color: #55a2e1e5;
@@ -967,7 +964,6 @@ main {
     justify-content: center;
 
     .concert-header_title {
-
       h2 {
         font-size: 3.4vw;
         font-family: "MonteCarlo";
@@ -1020,12 +1016,11 @@ main {
 
     img {
       width: 100%;
-      height: 100%; 
-      object-fit: cover; 
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
-
 
 .concert_l-container {
   max-width: 86%;
@@ -1033,6 +1028,8 @@ main {
   margin: 0 auto;
   .concert_introduction {
     margin-top: 160px;
+    max-width: 100%;
+    width: 100%;
     h1 {
       text-align: center;
       font-size: 40px;
@@ -1051,12 +1048,143 @@ main {
         transform: translateX(-50%);
       }
     }
-
-    p {
+    .concert_introduction-container {
       text-align: center;
       background-color: #ffffff;
-      padding: 50px 0;
       border-radius: 30px;
+      p {
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .concert-header {
+    color: #ffffff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    .concert-header_detail {
+      background-color: #55a2e1e5;
+      width: 100%;
+      height: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      order: 2;
+
+      .concert-header_title {
+        h2 {
+          font-size: 11vw;
+          font-family: "MonteCarlo";
+          text-align: center;
+        }
+
+        p {
+          font-size: 3.5vw;
+          text-align: center;
+          padding-bottom: 9%;
+        }
+      }
+
+      .concert-header_detail_about {
+        font-size: 1.6vw;
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+
+        .concert-header_detail_info {
+          padding-bottom: 6%;
+          text-align: center;
+          font-size: 4vw;
+        }
+
+        .concert-header_detail_where {
+          width: 82vw;
+          height: 14vw;
+          font-size: 3.5vw;
+          text-align: center;
+          border: 1px solid white;
+          border-radius: 10px;
+          margin-bottom: 3%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .concert-header_detail_date {
+          width: 82vw;
+          height: 14vw;
+          font-size: 3.5vw;
+          text-align: center;
+          border: 1px solid white;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+
+    .concert-header_image {
+      width: 100%;
+      height: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .concert_l-container {
+    max-width: 86%;
+    width: 100%;
+    margin: 0 auto;
+    .concert_introduction {
+      margin-top: 160px;
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        transform: translateY(20px);
+
+        &::after {
+          content: "";
+          display: block;
+          width: 250px;
+          height: 2px;
+          background-color: #73450d;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .concert_introduction-container {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 50px 0;
+        border-radius: 30px;
+        p {
+          max-width: 90%;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }
@@ -1283,6 +1411,7 @@ main {
       transform: translateX(-50%);
     }
   }
+  // ----------------time tableコンポーネントここから---------------
   .time_table_lump {
     background-color: #fff;
     border-radius: 25px;
@@ -1340,6 +1469,85 @@ main {
     }
   }
 }
+@media (max-width: 550px){
+  .time_table {
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      position: relative;
+      transform: translateY(20px);
+  
+      &::after {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 2px;
+        background-color: #73450d;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  .time_table_lump {
+    background-color: #fff;
+    border-radius: 25px;
+
+    h2 {
+      font-size: 24px;
+      color: #e51818;
+      text-align: center;
+      padding: 50px 0;
+    }
+    .time_table_time {
+      position: relative;
+      margin: 0 0 0 10vw;
+
+      .time {
+        padding-bottom: 127px;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 65%;
+          height: 2px;
+          background-color: #73450d;
+          position: absolute;
+          top: 12px;
+          left: 70px;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 65%;
+          height: 1px;
+          background-color: #73450d;
+          position: absolute;
+          bottom: 63px;
+          left: 70px;
+        }
+      }
+      .time1 {
+        padding-bottom: 160px;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 60%;
+          height: 2px;
+          background-color: #73450d;
+          position: absolute;
+          top: 12px;
+          left: 70px;
+        }
+      }
+    }
+  }
+}
+}
+// ------------------------------time tableコンポーネントここまで-------------------------------
 
 // ---------------------------- Eventコンポーネントここから----------------------------
 .performance_time {
@@ -1355,6 +1563,24 @@ main {
 
   h3 {
     font-size: 40px;
+  }
+}
+
+@media(max-width:550px){
+  .performance_time {
+    height: 300px;
+    width: 65%;
+    background-color: rgba(242, 145, 27, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12px;
+    left: 70px;
+  
+    h3 {
+      font-size: 25px;
+    }
   }
 }
 // ---------------------------- Eventコンポーネントここまで----------------------------
@@ -1399,6 +1625,9 @@ main {
     }
   }
 }
+.gallary_responshive{
+  display: none;
+}
 
 @media (min-width: 1440px) {
   .gallary_layer {
@@ -1418,3 +1647,53 @@ main {
     }
   }
 }
+
+@media(max-width:550px){
+  .gallary {
+    max-width: 86%;
+    width: 100%;
+    margin: 0 auto;
+  
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      padding: 80px 0;
+    }
+  
+    .gallary_layer {
+     display: none;
+      } 
+    }
+    .gallary_responshive{
+      display: block;
+      .first_layer{
+        width: 100%;
+      }
+      .first_layer{
+        max-width: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+        .content{
+          width: 100%;
+          height: 40vw;
+        }
+      }
+      .second_layer {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+      img {
+        width: 47vw;  
+        height: 47vw; 
+        object-fit: cover;
+      }
+    }
+      
+      .third_layer img {
+        width: 100%;
+        height: 40vw;
+        object-fit: cover;
+      }
+            
+    }
+  }  
