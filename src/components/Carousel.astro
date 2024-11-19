@@ -7,7 +7,7 @@ import JS4 from './images/red.jpg';
 import JS5 from './images/blue.jpg';
 import JS6 from './images/yellow.jpg';
 ---
-<div class="bg-image-loop">
+<div class="Carousel">
   <Image src={JS1} alt="JS1"/> <!-- 元々の写真にカルーセルのメニューが写ってしまっているので、ないものに後で差し替える -->
   <Image src={JS2} alt="JS2"/>
   <Image src={JS3} alt="JS3"/>
@@ -18,68 +18,3 @@ import JS6 from './images/yellow.jpg';
   <Image src={JS2} alt="JS2"/>
   <Image src={JS3} alt="JS3"/>
 </div>
-
-<style>
-  .bg-image-loop {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 500px;
-    position: relative;
-    margin: 80px 0;
-    padding: 0;
-    gap: 30px;
-  }
-
-  .bg-image-loop img {
-    height: 500px;
-    width: 700px;
-    object-fit: cover;
-    flex-shrink: 0;
-    animation: bg-slider 100s linear infinite;
-    border-radius: 10px;
-  }
-
-  @keyframes bg-slider {
-    from { transform: translateX(0); }
-    to { transform: translateX(-4380px); } 
-  }
-
-  @media (max-width: 800px) {
-    .bg-image-loop {
-    height: 350px;
-    gap: 30px;
-    margin: 0;
-  }
-
-  .bg-image-loop img {
-    height: 350px;
-    width: 420px;
-  }
-
-  @keyframes bg-slider {
-    from { transform: translateX(0); }
-    to { transform: translateX(-2700px); } 
-  }
-  }
-
-  @media (max-width: 500px) {
-    .bg-image-loop {
-    height: 250px;
-    gap: 30px;
-  }
-
-  .bg-image-loop img {
-    height: 250px;
-    width: 300px;
-  }
-
-  @keyframes bg-slider {
-    from { transform: translateX(0); }
-    to { transform: translateX(-1980px); } 
-  }
-  }
-
-  /* レスポンシブ対応は後でやります。 */
-  
-</style>

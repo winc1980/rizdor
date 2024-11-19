@@ -3,19 +3,19 @@ import Event from '@/components/Event.astro'
 const { height = '300px', top = '12px' } = Astro.props;
 ---
 
-<div class="time_table">
+<div class="timetable">
     <h1>Time Table</h1>
-    <div class="time_table_lump">
+    <div class="timetable__lump">
         <h2>11.11（日）</h2>
-        <div class="time_table_time">            
+        <div class="timetable__time">            
             <Event height="302px", top="12px" /> <!-- 予定が変わったら簡単に調節できるように -->
             <Event height="302px", top="390px" />
-                <p class="time">10:00</p>
-                <p class="time">11:00</p>
-                <p class="time">12:00</p>
-                <p class="time">13:00</p>
-                <p class="time">14:00</p>
-                <p class="time1">15:00</p>
+                <p class="timetable__t">10:00</p>
+                <p class="timetable__t">11:00</p>
+                <p class="timetable__t">12:00</p>
+                <p class="timetable__t">13:00</p>
+                <p class="timetable__t">14:00</p>
+                <p class="timetable__t1">15:00</p>
         </div>
     </div>
 </div>

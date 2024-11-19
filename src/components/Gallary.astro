@@ -9,55 +9,55 @@ import gallary5 from './images/gallary5.png';
 
 <div class="gallary">
   <h1>gallary</h1>
-  <div class="gallary_layer">
-    <div class="image-container big">
+  <div class="gallary__layer">
+    <div class="gallary__image-container big">
       <iframe src="https://www.youtube-nocookie.com/embed/eX-j--8Mzvg?si=1YQgnWv0xf1qcFuD&amp;controls=0" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen 
-        class="content"></iframe>
+        class="gallary__content"></iframe>
     </div>
-    <div class="image-container small">
-      <Image src={gallary1} alt="gallaryの一枚目の写真" class="content" />
-    </div>
-  </div>
-  <div class="gallary_layer">
-    <div class="image-container small">
-      <Image src={gallary2} alt="gallaryの二枚目の写真" class="content" />
-    </div>
-    <div class="image-container big">
-      <Image src={gallary3} alt="gallaryの三枚目の写真" class="content" />
+    <div class="gallary__image-container small">
+      <Image src={gallary1} alt="gallaryの一枚目の写真" class="gallary__content" />
     </div>
   </div>
-  <div class="gallary_layer">
-    <div class="image-container big">
-      <Image src={gallary4} alt="gallaryの四枚目の写真" class="content" />
+  <div class="gallary__layer">
+    <div class="gallary__image-container small">
+      <Image src={gallary2} alt="gallaryの二枚目の写真" class="gallary__content" />
     </div>
-    <div class="image-container small">
-      <Image src={gallary5} alt="gallaryの五枚目の写真" class="content" />
+    <div class="gallary__image-container big">
+      <Image src={gallary3} alt="gallaryの三枚目の写真" class="gallary__content" />
+    </div>
+  </div>
+  <div class="gallary__layer">
+    <div class="gallary__image-container big">
+      <Image src={gallary4} alt="gallaryの四枚目の写真" class="gallary__content" />
+    </div>
+    <div class="gallary__image-container small">
+      <Image src={gallary5} alt="gallaryの五枚目の写真" class="gallary__content" />
     </div>
   </div>
 </div>
 
 
 
-<div class="gallary_responshive">
-  <div class="first_layer">
+<div class="gallary__responshive">
+  <div class="gallary__first_layer">
       <iframe src="https://www.youtube-nocookie.com/embed/eX-j--8Mzvg?si=1YQgnWv0xf1qcFuD&amp;controls=0" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen 
-        class="content"></iframe>
+        class="gallary__content"></iframe>
       </div>
-        <div class="second_layer">
-      <Image src={gallary1} alt="gallaryの一枚目の写真" class="content" />
-      <Image src={gallary5} alt="gallaryの五枚目の写真" class="content" />
+        <div class="gallary__second_layer">
+      <Image src={gallary1} alt="gallaryの一枚目の写真" class="gallary__content" />
+      <Image src={gallary5} alt="gallaryの五枚目の写真" class="gallary__content" />
     </div>
-      <div class="third_layer">
-      <Image src={gallary3} alt="gallaryの三枚目の写真" class="content" />
+      <div class="gallary__third_layer">
+      <Image src={gallary3} alt="gallaryの三枚目の写真" class="gallary__content" />
     </div>
   </div>
