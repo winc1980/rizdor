@@ -148,7 +148,7 @@ header {
         background-color: rgba(0, 0, 0, 0.4); /* 半透明に修正 */
         visibility: hidden;
         opacity: 0;
-        z-index: 1000; 
+        z-index: 1000;
         transition: opacity 0.4;
       }
 
@@ -329,10 +329,9 @@ main {
       .p-top__img-container {
         display: flex;
         justify-content: center;
-        img{
+        img {
           width: 100%;
         }
-        
       }
 
       h2 {
@@ -406,12 +405,11 @@ main {
         .p-top__img-container {
           display: flex;
           justify-content: center;
-          img{
+          img {
             width: 100%;
             padding-top: 5vw;
             padding-bottom: 5vw;
           }
-          
         }
 
         h2 {
