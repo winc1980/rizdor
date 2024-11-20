@@ -148,7 +148,7 @@ header {
         background-color: rgba(0, 0, 0, 0.4); /* 半透明に修正 */
         visibility: hidden;
         opacity: 0;
-        z-index: 1000;
+        z-index: 1000; 
         transition: opacity 0.4;
       }
 
@@ -326,6 +326,14 @@ main {
           }
         }
       }
+      .p-top__img-container {
+        display: flex;
+        justify-content: center;
+        img{
+          width: 100%;
+        }
+        
+      }
 
       h2 {
         font-size: 2.5vw;
@@ -395,9 +403,15 @@ main {
             }
           }
         }
-        .p-top__img {
-          padding-top: 5vw;
-          padding-bottom: 5vw;
+        .p-top__img-container {
+          display: flex;
+          justify-content: center;
+          img{
+            width: 100%;
+            padding-top: 5vw;
+            padding-bottom: 5vw;
+          }
+          
         }
 
         h2 {
@@ -2120,7 +2134,6 @@ main {
 // ----- NewsDataここまで -----
 
 // ----- ShowMoreここから -----
-
 .showMore {
   --mask-height: 0px;
   --transition-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -2130,7 +2143,17 @@ main {
 }
 
 .showMore__btn {
-  text-align: center;
+  position: relative;
+  display: block;
+  order: 2;
+  width: 70px;
+  height: 50px;
+  font-size: 32px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 25px;
+  left: 47%;
+  margin-bottom: 44px;
 
   &::before {
     content: "More";
@@ -2245,14 +2268,14 @@ main {
     }
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 550px) {
   .showMore__btn {
     position: relative;
     display: block;
     order: 2;
     width: 70px;
     height: 50px;
-    font-size: 32px;
+    font-size: 30px;
     cursor: pointer;
     background-color: transparent;
     border-radius: 25px;
@@ -2325,7 +2348,6 @@ main {
     }
   }
 }
-
 // ----- ShowMoreここまで -----
 
 // ----- Timetableここから -----
