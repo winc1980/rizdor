@@ -8,7 +8,9 @@ import instagram from './images/instagram.png';
 
 <header class="header">
   <div class="header__logo">
+  <a href="http://localhost:4321/">
     <Image src={logo} alt="ロゴ" class="header__logo-image" />
+  </a>
   </div>
   <div class="header__navbar">
     <ul class="header__navbar-content">
@@ -45,6 +47,7 @@ import instagram from './images/instagram.png';
       <span class="header__hamburger-line"></span>
       <span class="header__hamburger-text"></span>
     </button>
+    <div class="header__overlay js-overlay"></div>
     <div class="header__nav-area js-nav-area" id="navigation">
       <nav id="js-global-navigation" class="header__navigation">
         <ul class="header__navigation-list">
@@ -102,10 +105,12 @@ let focusTrap = document.getElementById("js-focus-trap");
 let menu = document.querySelector(".js-nav-area");
 let accordionTrigger = document.querySelectorAll(".js-sp-accordion-trigger");
 let accordion = document.querySelectorAll(".js-sp-accordion");
+let overlay = document.querySelector(".js-overlay");
 
 hamburger.addEventListener("click", (e) => {
   e.currentTarget.classList.toggle(CLASS);
   menu.classList.toggle(CLASS);
+  overlay.classList.toggle(CLASS);
   if (flg) {
     backgroundFix(false);
     hamburger.setAttribute("aria-expanded", "false");
@@ -122,6 +127,27 @@ window.addEventListener("keydown", (event) => {
     hamburger.classList.remove(CLASS);
     menu.classList.remove(CLASS);
 
+    backgroundFix(false);
+    hamburger.focus();
+    hamburger.setAttribute("aria-expanded", "false");
+    flg = false;
+  }
+});
+
+overlay.addEventListener("click", () => {
+  hamburger.classList.remove(CLASS);
+  menu.classList.remove(CLASS);
+  overlay.classList.remove(CLASS); 
+  backgroundFix(false);
+  hamburger.setAttribute("aria-expanded", "false");
+  flg = false;
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    hamburger.classList.remove(CLASS);
+    menu.classList.remove(CLASS);
+    overlay.classList.remove(CLASS); 
     backgroundFix(false);
     hamburger.focus();
     hamburger.setAttribute("aria-expanded", "false");
