@@ -106,7 +106,7 @@ header {
           left: 50%;
           transform: translateX(-50%);
           width: 8vw;
-          min-width: 40px;
+          min-width: 30px;
           background-color: #73450d;
           transition: 0.4s;
 
@@ -901,7 +901,7 @@ main {
           justify-content: center;
 
           .p-middle__Blog_letter_b {
-            transform: translate(-12px, 0px) rotate(-25.43deg);
+            transform: translate(-14px, 3px) rotate(-25.43deg);
           }
           .p-middle__Blog_letter_l {
             transform: translate(-5px, -7px) rotate(-8.24deg);
@@ -942,7 +942,7 @@ main {
             font-size: 16px;
 
             .p-middle__Blog_letter_b {
-              transform: translate(-12px, 0px) rotate(-25.43deg);
+              transform: translate(-14px, 0px) rotate(-25.43deg);
             }
             .p-middle__Blog_letter_l {
               transform: translate(-5px, -7px) rotate(-8.24deg);
@@ -1023,7 +1023,7 @@ main {
       padding-bottom: 7vw;
 
       .blogpage__Blog_letter_b {
-        transform: translate(-12px, 0px) rotate(-25.43deg);
+        transform: translate(-14px, 3px) rotate(-25.43deg);
       }
       .blogpage__Blog_letter_l {
         transform: translate(-5px, -7px) rotate(-8.24deg);
@@ -1065,7 +1065,7 @@ main {
         justify-content: center;
 
         .pblogpage__Blog_letter_b {
-          transform: translate(-12px, 0px) rotate(-25.43deg);
+          transform: translate(-14px, 0px) rotate(-25.43deg);
         }
         .blogpage__Blog_letter_l {
           transform: translate(-5px, -7px) rotate(-8.24deg);
@@ -2150,7 +2150,7 @@ main {
   cursor: pointer;
   background-color: transparent;
   border-radius: 25px;
-  left: 47%;
+  left: calc((100% - 70px)/2);
   margin-bottom: 44px;
 
   &::before {
@@ -2277,7 +2277,6 @@ main {
     cursor: pointer;
     background-color: transparent;
     border-radius: 25px;
-    left: 45%;
     margin-bottom: 44px;
 
     &::before {
