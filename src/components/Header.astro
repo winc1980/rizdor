@@ -6,55 +6,170 @@ import x from './images/x.png';
 import instagram from './images/instagram.png';
 ---
 
-<header>
-    <Image src={ logo } alt="ロゴ" class="logo"/>
-    <nav class="navigation">
-    <ul class="navbar">
-        <li class="nav-link"><a href="/blogpage">Blog</a></li>
-        <li class="nav-link"><a href="">Schedule</a></li>
-        <li class="nav-link"><a href="">Concert</a></li>
+<header class="header">
+  <div class="header__logo">
+  <a href="http://localhost:4321/">
+    <Image src={logo} alt="ロゴ" class="header__logo-image" />
+  </a>
+  </div>
+  <div class="header__navbar">
+    <ul class="header__navbar-content">
+      <li class="header__navbar-item">
+        <a href="/blogpage" class="header__navbar-link">Blog</a>
+      </li>
+      <li class="header__navbar-item">
+        <a href="/winter_concert" class="header__navbar-link">Concert</a>
+      </li>
     </ul>
-    <ul class="sns">
-        <li>
-            <a href="https://twitter.com/ens_rizdor">
-                <Image src={ x } alt="x.comのアイコン">
-                    </a>
-                </li>
-        <li>
-            <a href="https://www.instagram.com/ens_rizdor">
-                <Image src={ instagram } alt="instagram.comのアイコン">
-                    </a>
-                </li>
+    <ul class="header__sns">
+      <li class="header__sns-item">
+        <a href="https://twitter.com/ens_rizdor">
+          <Image src={x} alt="x.comのアイコン" class="header__x" />
+        </a>
+      </li>
+      <li class="header__sns-item">
+        <a href="https://www.instagram.com/ens_rizdor">
+          <Image src={instagram} alt="instagram.comのアイコン" class="header__instagram" />
+        </a>
+      </li>
     </ul>
-    <div class="burger">
-        <div class="burger_menu">
-            <div class="content-wrapper">
-            <ul class="burger_navbar">
-                <li class="nav-link"><a href="/blogpage">Blog</a></li>
-                <li class="nav-link"><a href="">Schedule</a></li>
-                <li class="nav-link"><a href="">Concert</a></li>
-            </ul>
-            <ul class="burger_sns">
-                <li>
-                    <a href="https://twitter.com/ens_rizdor">
-                        <Image src={ x } alt="x.comのアイコン">
-                            </a>
-                        </li>
-                <li>
-                    <a href="https://www.instagram.com/ens_rizdor">
-                        <Image src={ instagram } alt="instagram.comのアイコン">
-                            </a>
-                        </li>
-            </ul>
-        </div>
-        </div>        
+  </div>
+
+  <div class="header__inner">
+    <button
+      id="js-hamburger"
+      type="button"
+      class="header__hamburger"
+      aria-controls="navigation"
+      aria-expanded="false"
+      aria-label="メニューを開く"
+    >
+      <span class="header__hamburger-line"></span>
+      <span class="header__hamburger-text"></span>
+    </button>
+    <div class="header__overlay js-overlay"></div>
+    <div class="header__nav-area js-nav-area" id="navigation">
+      <nav id="js-global-navigation" class="header__navigation">
+        <ul class="header__navigation-list">
+          <li>
+            <a href="/" class="header__navigation-link">TOP</a>
+          </li>
+          <li>
+            <a href="/blogpage" class="header__navigation-link">BLOG</a>
+          </li>
+          <li>
+            <a href="/winter_concert" class="header__navigation-link">CONCERT</a>
+          </li>
+        </ul>
+        <div id="js-focus-trap" tabindex="0"></div>
+      </nav>
     </div>
-    </nav>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        $(".burger").click(function(){
-        $(".burger").toggleClass("is-active");
-        $(".burger_menu").toggleClass("is-active");
-        });
-    </script>
+  </div>
 </header>
+
+<script>
+const backgroundFix = (bool) => {
+  const scrollingElement = () => {
+    const browser = window.navigator.userAgent.toLowerCase();
+    if ("scrollingElement" in document) return document.scrollingElement;
+    return document.documentElement;
+  };
+
+  const scrollY = bool
+    ? scrollingElement().scrollTop
+    : parseInt(document.body.style.top || "0");
+
+  const fixedStyles = {
+    height: "100vh",
+    position: "fixed",
+    top: `${scrollY * -1}px`,
+    left: "0",
+    width: "100vw",
+  };
+
+  Object.keys(fixedStyles).forEach((key) => {
+    document.body.style[key] = bool ? fixedStyles[key] : "";
+  });
+
+  if (!bool) {
+    window.scrollTo(0, scrollY * -1);
+  }
+};
+
+const CLASS = "-active";
+let flg = false;
+let accordionFlg = false;
+
+let hamburger = document.getElementById("js-hamburger");
+let focusTrap = document.getElementById("js-focus-trap");
+let menu = document.querySelector(".js-nav-area");
+let accordionTrigger = document.querySelectorAll(".js-sp-accordion-trigger");
+let accordion = document.querySelectorAll(".js-sp-accordion");
+let overlay = document.querySelector(".js-overlay");
+
+hamburger.addEventListener("click", (e) => {
+  e.currentTarget.classList.toggle(CLASS);
+  menu.classList.toggle(CLASS);
+  overlay.classList.toggle(CLASS);
+  if (flg) {
+    backgroundFix(false);
+    hamburger.setAttribute("aria-expanded", "false");
+    hamburger.focus();
+    flg = false;
+  } else {
+    backgroundFix(true);
+    hamburger.setAttribute("aria-expanded", "true");
+    flg = true;
+  }
+});
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    hamburger.classList.remove(CLASS);
+    menu.classList.remove(CLASS);
+
+    backgroundFix(false);
+    hamburger.focus();
+    hamburger.setAttribute("aria-expanded", "false");
+    flg = false;
+  }
+});
+
+overlay.addEventListener("click", () => {
+  hamburger.classList.remove(CLASS);
+  menu.classList.remove(CLASS);
+  overlay.classList.remove(CLASS); 
+  backgroundFix(false);
+  hamburger.setAttribute("aria-expanded", "false");
+  flg = false;
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    hamburger.classList.remove(CLASS);
+    menu.classList.remove(CLASS);
+    overlay.classList.remove(CLASS); 
+    backgroundFix(false);
+    hamburger.focus();
+    hamburger.setAttribute("aria-expanded", "false");
+    flg = false;
+  }
+});
+
+accordionTrigger.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle(CLASS);
+    e.currentTarget.nextElementSibling.classList.toggle(CLASS);
+    if (accordionFlg) {
+      e.currentTarget.setAttribute("aria-expanded", "false");
+      accordionFlg = false;
+    } else {
+      e.currentTarget.setAttribute("aria-expanded", "true");
+      accordionFlg = true;
+    }
+  });
+});
+
+focusTrap.addEventListener("focus", () => {
+  hamburger.focus();
+});
+</script>

@@ -4,19 +4,19 @@ import { Image } from 'astro:assets';
 import picture from './images/exsample.png';
 ---
     <div class="EventData">
-    <p class="title_responsive">イベント名</p>
-    <div class="EventData_left-circle"></div>
-    <div class="EventData_right-circle"></div>
-    <Image src={ picture } alt="イベントの写真" class="picture"/>
-    <div class="data">
-    <p class="title">イベント名</p>
-    <div class="date">
+    <p class="EventData__title-responsive">イベント名</p>
+    <div class="EventData__left-circle"></div>
+    <div class="EventData__right-circle"></div>
+    <Image src={ picture } alt="イベントの写真" class="EventData__picture"/>
+    <div class="EventData__data">
+    <p class="EventData__title">イベント名</p>
+    <div class="EventData__date">
         <img src="" alt="">
-        <p class="year">2024</p>
-        <p class="date2">01/01</p>
-        <div class="lump">
-        <p class="day_of_the_week">SUN</p>
-        <p class="time">12:00</p>
+        <p class="EventData__year">2024</p>
+        <p class="EventData__date2">01/01</p>
+        <div class="EventData__lump">
+        <p class="EventData__day-of-the-week">SUN</p>
+        <p class="EventData__time">12:00</p>
         </div>
     </div>
 <div class="description">
@@ -28,163 +28,6 @@ import picture from './images/exsample.png';
 </div>
 </div>
 </div>
-    <style>
-
-        * {
-        margin: 0;
-        padding: 0;
-        }
-        .EventData_left-circle::after {
-        position: relative;
-        }
-        .EventData_left-circle::after {
-        content: "";
-        position: absolute;
-        bottom: -4px;
-        left: 0; 
-        width: 8px;
-        height: 8px;
-        background-color: #73450D; 
-        border-radius: 50%; 
-    }
-    .EventData_left-circle::before {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: 0; 
-        width: 8px;
-        height: 8px;
-        background-color: #73450D; 
-        border-radius: 50%; 
-    }
-        .EventData_right-circle::after {
-            position: relative;
-        }
-        .EventData_right-circle::before {
-            position: relative;
-        }
-
-        .EventData_right-circle::after {
-            content: "";
-            position: absolute;
-            bottom: -4px; 
-            right: 0; 
-            width: 8px; 
-            height: 8px; 
-            background-color: #73450D; 
-            border-radius: 50%; 
-        }
-        .EventData_right-circle::before {
-        content: "";
-        position: absolute;
-        top: -4px;
-        right: 0; 
-        width: 8px;
-        height: 8px;
-        background-color: #73450D; 
-        border-radius: 50%; 
-    }
-
-        .EventData{
-            position: relative;
-            display: flex;
-            padding: 50px 5% 50px 5%;
-        }
-        
-        .EventData::before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: #73450D;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-            .EventData::after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 1px;
-                background-color: #73450D;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
-
-            .title_responsive{
-                display: none;
-            }
-
-            .picture{
-                object-fit: contain;
-            }
-            .data {
-                max-width: 63%;
-                padding: 50px 0 50px 10%; 
-            }
-            .date{
-                display: flex;
-                position: relative;
-                left: -13px;
-                padding-bottom: 19px;
-                padding-top: 7px;
-            }
-
-            .title{
-                font-size: 20px;
-                font-weight: 400;
-                color: #73450D;
-            }
-            .date2{
-                font-size: 35px;
-
-            }
-            .year{
-                font-size: 14px;
-                position: relative;
-                left: -10px;
-                top: 2px;
-                transform: rotate(90deg);
-            }
-                
-        
-                
-
-            .day_of_the_week{
-                font-size: 15px;
-                padding-top: 5px;
-            }
-            .time{
-                font-size: 15px;
-            }
-        @media (max-width: 550px){
-            .EventData{
-                display: block;
-                padding-top: 30px;
-                
-            } 
-            .title_responsive{
-                display: block;
-                font-size: 20px;
-                font-weight: 400;
-                color: #73450D;
-                text-align: center;
-                padding-bottom: 25px;                
-            }           
-            .picture{
-                margin: 0 auto;
-            }
-            .data{
-                max-width: 100%;
-                padding: 20px 0 50px 0;
-            }
-            .title{
-                display: none;
-            }
-            }
-    </style>
 
 
 

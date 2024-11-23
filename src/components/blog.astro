@@ -6,9 +6,10 @@ import image from './images/image.png';
 const { width = '500px', height = 'auto', marginbottom = '0px' } = Astro.props;
 ---
 
-<div class="blog_component" style={`width: ${width}; height: ${height}; margin-bottom: ${marginbottom};`}>
+<div class="blog" style={`width: ${width}; height: ${height}; margin-bottom: ${marginbottom};`}>
     <Image src={image} alt="CMSから読み込んだ画像" /> 
-    <p class="title">簡単なタイトル「・・・・」</p>
-    <p class="date">yyyy.mm.dd</p>
+    <a href="link for a blog"></a>
+    <p class="blog__title">簡単なタイトル「・・・・」</p>
+    <p class="blog__date">yyyy.mm.dd</p>
 </div>
 

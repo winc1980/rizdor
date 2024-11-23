@@ -4,36 +4,41 @@ import Blog from '@/components/blog.astro';
 ---
 
   <div class="showMore js-showMore">
-    <input class="showMore_trigger" id="showMore" type="checkbox">
-    <label class="showMore_btn" for="showMore">
-    <div class="showMore_top_and_bottom">
-    <div class="showMore_left_and_right">
+    <input class="showMore__trigger" id="showMore" type="checkbox">
+    <label class="showMore__btn" for="showMore">
+    <div class="showMore__top_and_bottom">
+    <div class="showMore__left_and_right">
     </div>
     </div>
     </label>
-    <div class="showMore_contentWrapper">
-      <div class="showMore_content">
-            <div class="left_side">
+    <div class="showMore__contentWrapper">
+      <div class="showMore__content">
+            <div class="showMore__left_side">
               <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
               <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
               <Blog width = '35vw', height = 'auto'/>
             </div>  
-            <div class="right_side">
+            <div class="showMore__right_side">
               <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
               <Blog width = '35vw', height = 'auto', marginbottom="120px"/>
               <Blog width = '35vw', height = 'auto'/>
-            </div>    
-      </div>
+            </div> 
+            <div class="showMore__content_responsive">
+              <Blog width = '70vw', height = 'auto', marginbottom="120px"/>
+              <Blog width = '70vw', height = 'auto', marginbottom="120px"/>
+              <Blog width = '70vw', height = 'auto'/>              
+            </div> 
+      </div>  
     </div>
   </div>
 
   <script is:inline>
     class ShowMoreShowLessButton {
       #defaults = {
-        selector: '.js-showMore',
-        customPropertyName: '--mask-height'
+        selector: '.js-showMore', // セレクター名
+        customPropertyName: '--mask-height' // カスタムプロパティ名
       }
-
+  
       #options
       #showMoreList
       constructor(config) {
@@ -41,12 +46,12 @@ import Blog from '@/components/blog.astro';
         this.#showMoreList = document.querySelectorAll(this.#options.selector)
         this.#init()
       }
-
+  
       #init() {
         for (const el of this.#showMoreList) {
           const trigger = el.querySelector('input[type="checkbox"]')
-          const contentWrapper = el.querySelector('.showMore_contentWrapper')
-          const content = contentWrapper.querySelector('.showMore_content')
+          const contentWrapper = el.querySelector('.showMore__contentWrapper')
+          const content = contentWrapper.querySelector('.showMore__content') 
           const contentHeight = content.getBoundingClientRect().height
           trigger.addEventListener('change', () => {
             if (trigger.checked) {
@@ -62,10 +67,10 @@ import Blog from '@/components/blog.astro';
       }
     }
 
-    // クライアントサイドで実行
     if (typeof window !== "undefined") {
       window.addEventListener("DOMContentLoaded", () => {
         const showMoreShowLessButton = new ShowMoreShowLessButton()
       })
     }
   </script>
+  
