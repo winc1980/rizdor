@@ -4,6 +4,8 @@ import vue from "@astrojs/vue";
 import react from "@astrojs/react"; 
 
 export default defineConfig({
+  site: 'https://astronaut.github.io',
+  base: '/my-repo',
   vite: {
     resolve: {
       alias: {
