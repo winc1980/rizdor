@@ -1045,16 +1045,12 @@ main {
     }
     .blogpage__view {
       padding-top: 10vw;
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // justify-content: space-between;
       padding-bottom: 78px;
 
 
-      .blogpage__left_side {
-        // margin-right: 10vw;
-        display: flex;
-        justify-content: space-between;
-      }
+
     }
     .blogpage__responsive {
       display: none;
@@ -1708,7 +1704,7 @@ main {
 .blog {
   display: inline-block;
   position: relative;
-  padding: 10% 10% 0 10%;
+  padding: 2% 2% 0 2%;
   border: 3px solid #73450d;
 
   img {
@@ -1723,10 +1719,10 @@ main {
     width: 100%;
   }
   .blog__title {
-    padding: 15px 0 5px 0;
+    padding: 15px 0 0px 1%;
   }
   .blog__date {
-    padding: 10px 0 25px 0;
+    padding: 0px 0 25px 1%;
   }
 }
 // ----- blogここまで -----
