@@ -6,6 +6,7 @@ const title = "早稲田大学アンサンブル・リドール";
 const description = "早稲田大学公認音楽サークル「アンサンブル リドール」オフィシャルウェブサイト。ポップスからジャズ、ラテンやオーケストラまで幅広いジャンルで活動。";
 const og_image = { logo }; 
 import biglogo from './images/biglogo.png';
+import biglogo3 from './images/biglogo3.png';
 import Carousel from '@/components/Carousel.astro'
 import NewsData from "@/components/NewsData.astro"
 import EventData from "@/components/EventData.astro";
@@ -36,7 +37,8 @@ const response2 = await getNews({
 			<span class="p-top__logos_underline1"></span>
 			<span class="p-top__logos_underline2"></span>
 			<div class="p-top__img-container">
-			<Image src={ biglogo } alt="大きなロゴ" class="p-top__img"/>
+			<Image src={biglogo3} alt="大きなロゴ" class="p-top__img" /> 
+			<!-- <img src="./images/biglogo.png"class="p-top__img"> -->
 			</div>
 			<h2>アンサンブル・リドール</h2>
 			</div>
