@@ -7,7 +7,6 @@ const { width = '300px', height = 'auto', marginbottom = '0px' } = Astro.props;
 
 import { getBlogs ,getBlogDetail} from "../lib/microcms";
 const response = await getBlogs({ fields: ["id", "title","image","content","date"] });
-console.log(response.contents);
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId as string);
 ---
@@ -27,6 +26,6 @@ const blog = await getBlogDetail(blogId as string);
 
           ))
         }
-      </ul>
+    </ul>
 
 

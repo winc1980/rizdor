@@ -73,4 +73,38 @@ export type News = {
     });
   };
 
+
+// Schedule型定義
+export type Schedule = {
+    id: string;
+    name: string;
+    year: string;
+    day: string;
+    week: string;
+    time: string;
+    text: string;
+    image?: {
+      url: string;
+    };
+  };
+  export type ScheduleResponse = {
+    totalCount: number;
+    offset: number;
+    limit: number;
+    contents: Schedule[];
+  };
   
+  //APIの呼び出し
+  export const getSchedule = async (queries?: MicroCMSQueries) => {
+    return await client.get<ScheduleResponse>({ endpoint: "schedule", queries });
+  };
+  export const getScheduleDetail = async (
+    contentId: string,
+    queries?: MicroCMSQueries
+  ) => {
+    return await client.getListDetail<Schedule>({
+      endpoint: "schedule",
+      contentId,
+      queries,
+    });
+  };
