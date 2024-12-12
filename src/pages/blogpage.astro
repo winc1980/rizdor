@@ -3,6 +3,12 @@ import Layout from "@/layouts/Layout.astro";
 import Blog from '@/components/blog.astro';
 import ShowMore from '@/components/ShowMore.astro';
 const title = "早稲田大学アンサンブル・リドール Blogページ";
+
+
+import { getBlogs ,getBlogDetail} from "../lib/microcms";
+const response = await getBlogs({ fields: ["id", "title"] });
+const { blogId } = Astro.params;
+const blog = await getBlogDetail(blogId as string);
 ---
 
 <Layout title={title}>
@@ -18,23 +24,23 @@ const title = "早稲田大学アンサンブル・リドール Blogページ";
                 私のライブや音楽活動の様子をブログで発信しています！コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、日々の活動を詳しくお届けしています。
             </p>  
             <div class="blogpage__view">
-                <div class="blogpage__left_side">
+                <!-- <div class="blogpage__left_side"> -->
                     <Blog width = '35vw', height = 'auto', marginbottom="9vw"/>
-                    <Blog width = '35vw', height = 'auto', marginbottom="9vw"/>
-                    <Blog width = '35vw', height = 'auto'/>
-                </div>  
-                <div class="blogpage__right_side">
-                    <Blog width = '35vw', height = 'auto', marginbottom="9vw"/>
-                    <Blog width = '35vw', height = 'auto', marginbottom="9vw"/>
-                    <Blog width = '35vw', height = 'auto'/>
-                </div>    
+                    <!-- <Blog width = '35vw', height = 'auto', marginbottom="9vw"/> -->
+                    <!-- <Blog width = '35vw', height = 'auto'/> -->
+                <!-- </div>   -->
+                <!-- <div class="blogpage__right_side">
+                    <Blog width = '35vw', height = 'auto', marginbottom="9vw"/> -->
+                    <!-- <Blog width = '35vw', height = 'auto', marginbottom="9vw"/> -->
+                    <!-- <Blog width = '35vw', height = 'auto'/> -->
+                <!-- </div>     -->
             </div>
-            <div class="blogpage__responsive">
+            <!-- <div class="blogpage__responsive">
                     <Blog width = '70vw', height = 'auto', marginbottom="15vw"/>
                     <Blog width = '70vw', height = 'auto', marginbottom="15vw"/>
                     <Blog width = '70vw', height = 'auto'/>
-                </div>  
-            <ShowMore />
+                </div>   -->
+            <!-- <ShowMore /> -->
         </div>
     </main>
 </Layout>

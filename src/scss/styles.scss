@@ -465,6 +465,7 @@ main {
 
       .p-middle__News_box {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         .p-middle__News_box-left {
           width: 40vw;
@@ -919,12 +920,14 @@ main {
           }
         }
         .p-middle__Blog_about {
+          margin: 0 auto;
           display: flex;
           justify-content: space-between;
           padding-top: 100px;
           .p-middle__Blog_pa {
+            margin: 0 auto;
             width: 52vw;
-            display: flex;
+            // display: flex;
             flex-direction: column;
             .p-middle__Blog_p {
               padding: 0 0 10% 0;
@@ -1043,10 +1046,14 @@ main {
     .blogpage__view {
       padding-top: 14vw;
       display: flex;
+      justify-content: space-between;
       padding-bottom: 78px;
 
+
       .blogpage__left_side {
-        margin-right: 10vw;
+        // margin-right: 10vw;
+        display: flex;
+        justify-content: space-between;
       }
     }
     .blogpage__responsive {
@@ -1587,11 +1594,12 @@ main {
 
 .Blog_link__lump {
   position: relative;
-  margin-left: 20%;
-  margin-top: 50px;
+  margin-left: 10%;
+  // margin-top: 2px;
 }
 
 .Blog_link__lump::after {
+  margin: 0 auto;
   content: "";
   position: absolute;
   bottom: -3px;

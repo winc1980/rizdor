@@ -12,6 +12,16 @@ import EventData from "@/components/EventData.astro";
 import detail from "./images/detail.png";
 import Blog from "@/components/blog.astro";
 import Bloglink from "@/components/blog_link.astro";
+
+//microCMS呼び出し
+import { getBlogs } from "../lib/microcms";
+const response = await getBlogs({ fields: ["id", "title"] });
+import { getNews ,getNewsDetail} from "../lib/microcms";
+const response2 = await getNews({
+  fields: ["id", "title", "description", "date", "text"],
+ })
+ const { newsId } = Astro.params;
+ const news = await getNewsDetail(newsId as string);
 ---
 
 <Layout title={title} , description={description} og_image={og_image}>
@@ -45,19 +55,19 @@ import Bloglink from "@/components/blog_link.astro";
 				<p class="p-middle__News_letter_s">s</p>
 				</div>
 				<div class="p-middle__News_box">
-				<div class="p-middle__News_box-left">
+				<!-- <div class="p-middle__News_box-left"> -->
 				<NewsData />
-				<NewsData />
-				<NewsData />
+				<!-- <NewsData />
+				<NewsData /> -->
 				</div>
-				<div class="p-middle__News_box-right">
+				<!-- <div class="p-middle__News_box-right"> 
 				<NewsData />
 				<NewsData />
 				<NewsData />
-				</div>
+				</div> 
 				<div class="p-middle__News_box_add">
 				<NewsData />
-				</div>
+				</div> -->
 				</div>
 			</div>
 			<div class="p-middle__Schedule">
@@ -173,14 +183,14 @@ import Bloglink from "@/components/blog_link.astro";
 						皆さんからのコメントや応援がいつも大きな励みになっています。<br>
 						ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
 					</p>
-					<div class="p-middle__Blog_the-most-least-one_responsive">
+					<!-- <div class="p-middle__Blog_the-most-least-one_responsive">
 						<Blog width="60vw" />
-					</div>
+					</div> -->
 					<Bloglink />
 					</div>
-					<div class="p-middle__Blog_the-most-least-one">
-						<Blog width="30vw"/>
-					</div>
+					<!-- <div class="p-middle__Blog_the-most-least-one">
+						<Blog width="30vw"/> -->
+					<!-- </div> -->
 				</div>
 		</div>
 
