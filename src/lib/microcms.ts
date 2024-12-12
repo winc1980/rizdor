@@ -7,17 +7,12 @@ const client = createClient({
   apiKey: import.meta.env.MICROCMS_API_KEY,
 });
 
-// 型定義
+// Blog型定義
 export type Blog = {
     id: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    revisedAt: string;
     title: string;
     content: string;
-    concept?: string;
-    img?: {
+    image?: {
       url: string;
     };
   };
