@@ -37,38 +37,7 @@ export type Blog = {
       queries,
     });
   };
-// export type Blog = {
-//   title: string;
-//   content: string;
-//   date: string;
-//   img?: {
-//     url: string;
-//   };
-// } & MicroCMSListContent;
-
-// export type BlogResponse = {
-//     totalCount: number;
-//     offset: number;
-//     limit: number;
-//     contents: Blog[];
-//   };
-
-// // APIの呼び出し
-// export const getBlogs = async (queries?: MicroCMSQueries) => {
-//   return await client.getList<Blog>({ endpoint: "blogs", queries });
-// };
-
-// export const getBlogDetail = async (
-//   contentId: string,
-//   queries?: MicroCMSQueries
-// ) => {
-//   return await client.getListDetail<Blog>({
-//     endpoint: "blogs",
-//     contentId,
-//     queries,
-//   });
-// };
-//ニュース型定義
+// News型定義
 export type News = {
     id: string;
     createdAt: string;
@@ -103,3 +72,5 @@ export type News = {
       queries,
     });
   };
+
+  
