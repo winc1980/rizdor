@@ -7,6 +7,7 @@ const description = "早稲田大学公認音楽サークル「アンサンブ�
 const og_image = { logo }; 
 import biglogo from './images/biglogo.png';
 import biglogo3 from './images/biglogo3.png';
+import biglogo4 from './images/biglogo4.png';
 import Carousel from '@/components/Carousel.astro'
 import NewsData from "@/components/NewsData.astro"
 import EventData from "@/components/EventData.astro";
@@ -37,7 +38,7 @@ const response2 = await getNews({
 			<span class="p-top__logos_underline1"></span>
 			<span class="p-top__logos_underline2"></span>
 			<div class="p-top__img-container">
-			<Image src={biglogo3} alt="大きなロゴ" class="p-top__img" /> 
+			<Image src={biglogo4} alt="大きなロゴ" class="p-top__img" /> 
 			<!-- <img src="./images/biglogo.png"class="p-top__img"> -->
 			</div>
 			<h2>アンサンブル・リドール</h2>
@@ -172,14 +173,14 @@ const response2 = await getNews({
 						皆さんからのコメントや応援がいつも大きな励みになっています。<br>
 						ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
 					</p>
-					<!-- <div class="p-middle__Blog_the-most-least-one_responsive">
+					<div class="p-middle__Blog_the-most-least-one_responsive">
 						<Blog width="60vw" />
-					</div> -->
+					</div>
 					<Bloglink />
 					</div>
-					<!-- <div class="p-middle__Blog_the-most-least-one">
-						<Blog width="30vw"/> -->
-					<!-- </div> -->
+					<div class="p-middle__Blog_the-most-least-one">
+						<Blog width="30vw"/> 
+					 </div>
 				</div>
 		</div>
 
