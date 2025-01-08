@@ -927,7 +927,7 @@ main {
         }
         .p-middle__Blog_about {
           margin: 0 auto;
-          display: flex;
+          // display: flex;
           justify-content: space-between;
           padding-top: 100px;
           .p-middle__Blog_pa {
@@ -1596,8 +1596,10 @@ main {
 
 .Blog_link__lump {
   position: relative;
-  margin-left: 10%;
-  // margin-top: 2px;
+  // margin-left: 10%;
+  margin-top: 50px;
+  text-align: center;
+
 }
 
 .Blog_link__lump::after {
@@ -1605,9 +1607,10 @@ main {
   content: "";
   position: absolute;
   bottom: -3px;
-  left: 25px;
-  width: 180px;
-  height: 1.4px;
+  // left: 25px;
+  right: 535px;
+  width: 200px;
+  height: 2px;
   background-color: #f2911b;
 }
 
@@ -1615,21 +1618,24 @@ main {
   content: "";
   position: absolute;
   top: 5px;
-  left: -15px;
-  width: 180px;
-  height: 1.2px;
+  // bottom: 45px;
+  left: 530px;
+  width: 200px;
+  height: 2px;
   background-color: #f2911b;
 }
 
 .Blog__link {
   font-size: 32px;
   position: relative;
+  // text-align: center;
+  // margin: 0 auto;
 }
 
 .Blog__link::after {
   content: "";
   display: block;
-  width: 1.2px;
+  width: 2px;
   height: 45px;
   position: absolute;
   top: 14px;
@@ -1640,7 +1646,7 @@ main {
 .Blog__link::before {
   content: "";
   display: inline-block;
-  width: 1.2px;
+  width: 2px;
   height: 45px;
   position: absolute;
   top: -5px;
@@ -1710,8 +1716,10 @@ main {
 .blog {
   display: inline-block;
   position: relative;
-  padding: 2% 2% 0 2%;
+  padding: 0% 0% 0 0%;
   border: 3px solid #73450d;
+  background-color: white;
+  border-radius: 1%;
 
   img {
     max-width: 100%;
@@ -1723,12 +1731,15 @@ main {
     left: 0;
     height:100%;
     width: 100%;
+
+    // background-color: white;
   }
   .blog__title {
-    padding: 15px 0 0px 1%;
+    padding: 15px 0 0px 2%;
+    font-size: 25px;
   }
   .blog__date {
-    padding: 0px 0 25px 1%;
+    padding: 5px 0 25px 3%;
   }
 }
 // ----- blogここまで -----
