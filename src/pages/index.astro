@@ -172,53 +172,54 @@ const news = await getNewsDetail(newsId as string);
           </div>
         </div>
 
-        <div class="p-middle__Blog">
-          <div class="p-middle__Blog_letter">
-            <p class="p-middle__Blog_letter_b">B</p>
-            <p class="p-middle__Blog_letter_l">l</p>
-            <p class="p-middle__Blog_letter_o">o</p>
-            <p class="p-middle__Blog_letter_g">g</p>
-          </div>
-          <div class="p-middle__Blog_about">
-            <div class="p-middle__Blog_pa">
-              <p class="p-middle__Blog_p">
-                私のライブや音楽活動の様子をブログで発信しています！
-                コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、
-                日々の活動を詳しくお届けしています。音楽に対する思いや、 新しいチャレンジについても書いているので、ぜひチェックしてみてください。
-                皆さんからのコメントや応援がいつも大きな励みになっています。
-                ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
-              </p>
-              <!-- <div class="p-middle__Blog_the-most-least-one_responsive"> -->
-              <!-- <Blog width="60vw" /> -->
-              <!-- </div> -->
-              <!-- <Bloglink /> -->
-            </div>
-            <div class="p-middle__Blog_the-most-least-one">
-              <!-- <Blog width="30vw"/>  -->
-              <ul
-                style="display: flex; flex-wrap: wrap;justify-content: space-between;"
-              >
-                {
-                  response.contents.slice(0, 1).map((blog: any) => (
-                    <div class="blog" style="width: 350px; height:430px margin-top:30px">
-                      <a href={blog.id} />
+		<div class="p-middle__Blog">
+			<div class="p-middle__Blog_letter">
+				<p class="p-middle__Blog_letter_b">B</p>
+				<p class="p-middle__Blog_letter_l">l</p>
+				<p class="p-middle__Blog_letter_o">o</p>
+				<p class="p-middle__Blog_letter_g">g</p>
+				</div>
+				<div class="p-middle__Blog_about">
+					<div class="p-middle__Blog_pa">
+					<p class="p-middle__Blog_p">
+						私のライブや音楽活動の様子をブログで発信しています！<br>
+						コンサートやリサイタルの情報、リハーサルの裏側、パフォーマンスの感想など、
+						日々の活動を詳しくお届けしています。音楽に対する思いや、
+						新しいチャレンジについても書いているので、ぜひチェックしてみてください。
+						皆さんからのコメントや応援がいつも大きな励みになっています。<br>
+						ブログを通じて、より多くの方と音楽を共有できることを楽しみにしています！
+					</p>
+					<div class="p-middle__Blog_the-most-least-one_responsive">
+						<!-- <Blog width="60vw" /> -->
+					</div>
+					<Bloglink />
+					</div>
+					<div class="p-middle__Blog_the-most-least-one">
+						<!-- <Blog width="30vw"/> -->
+						<ul
+						style="display: flex; flex-wrap: wrap;justify-content: space-between;"
+					  >
+						{
+						  response.contents.slice(0, 1).map((blog: any) => (
+							<div class="blog" style="width: 350px; height:430px margin-top:-30px">
+							  <a href={blog.id} />
+		
+							  <img
+								src={blog.image.url}
+								alt=""
+								style="width: 400px; height: 320px; object-fit: cover;"
+							  />
+							  <p class="blog__title">{blog.title}</p>
+							  <p class="blog__date">{blog.date}</p>
+							</div>
+						  ))
+						}
+					  </ul>
+					</div>
+				</div>
+		</div>
 
-                      <img
-                        src={blog.image.url}
-                        alt=""
-                        style="width: 400px; height: 320px; object-fit: cover;"
-                      />
-                      <p class="blog__title">{blog.title}</p>
-                      <p class="blog__date">{blog.date}</p>
-                    </div>
-                  ))
-                }
-              </ul>
-            </div>
-            <Bloglink />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+		</section>
+
+	</main>
 </Layout>

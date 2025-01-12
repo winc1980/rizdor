@@ -927,14 +927,14 @@ main {
           }
         }
         .p-middle__Blog_about {
-          margin: 0 auto;
-          // display: flex;
+          // margin: 0 auto;
+          display: flex;
           justify-content: space-between;
-          padding-top: 100px;
+          padding-top: 50px;
           .p-middle__Blog_pa {
-            margin: 0 auto;
-            width: 90vw;
-            // display: flex;
+            margin: 70px auto 0 auto;
+            width: 45vw;
+            display: flex;
             flex-direction: column;
             .p-middle__Blog_p {
               padding: 0 0 30px 0;
@@ -1595,23 +1595,49 @@ main {
 
 // ----- blog_linkここから -----
 
+// .Blog_link__lump {
+//   position: relative;
+//   // margin-left: 10%;
+//   margin-top: 50px;
+//   text-align: center;
+
+// }
+
+// .Blog_link__lump::after {
+//   margin: 0 auto;
+//   content: "";
+//   position: absolute;
+//   bottom: -3px;
+//   // left: 25px;
+//   right: 41%;
+//   width: 200px;
+//   height: 2px;
+//   background-color: #f2911b;
+// }
+
+// .Blog_link__lump::before {
+//   content: "";
+//   position: absolute;
+//   top: 5px;
+//   // bottom: 45px;
+//   left: 41%;
+//   width: 200px;
+//   height: 2px;
+//   background-color: #f2911b;
+// }
 .Blog_link__lump {
   position: relative;
-  // margin-left: 10%;
+  margin-left: 20%;
   margin-top: 50px;
-  text-align: center;
-
 }
 
 .Blog_link__lump::after {
-  margin: 0 auto;
   content: "";
   position: absolute;
   bottom: -3px;
-  // left: 25px;
-  right: 41%;
-  width: 200px;
-  height: 2px;
+  left: 25px;
+  width: 180px;
+  height: 1.4px;
   background-color: #f2911b;
 }
 
@@ -1619,10 +1645,9 @@ main {
   content: "";
   position: absolute;
   top: 5px;
-  // bottom: 45px;
-  left: 41%;
-  width: 200px;
-  height: 2px;
+  left: -15px;
+  width: 180px;
+  height: 1.2px;
   background-color: #f2911b;
 }
 
@@ -1633,10 +1658,31 @@ main {
   // margin: 0 auto;
 }
 
+// .Blog__link::after {
+//   content: "";
+//   display: block;
+//   width: 2px;
+//   height: 45px;
+//   position: absolute;
+//   top: 14px;
+//   right: -5px;
+//   background-color: #f2911b;
+// }
+
+// .Blog__link::before {
+//   content: "";
+//   display: inline-block;
+//   width: 2px;
+//   height: 45px;
+//   position: absolute;
+//   top: -5px;
+//   left: -8px;
+//   background-color: #f2911b;
+// }
 .Blog__link::after {
   content: "";
   display: block;
-  width: 2px;
+  width: 1.2px;
   height: 45px;
   position: absolute;
   top: 14px;
@@ -1647,7 +1693,7 @@ main {
 .Blog__link::before {
   content: "";
   display: inline-block;
-  width: 2px;
+  width: 1.2px;
   height: 45px;
   position: absolute;
   top: -5px;
