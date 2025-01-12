@@ -199,7 +199,7 @@ const news = await getNewsDetail(newsId as string);
                 style="display: flex; flex-wrap: wrap;justify-content: space-between;"
               >
                 {
-                  response.contents.slice(0, 3).map((blog: any) => (
+                  response.contents.slice(0, 1).map((blog: any) => (
                     <div class="blog" style="width: 350px; height:430px margin-top:30px">
                       <a href={blog.id} />
 
